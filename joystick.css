@@ -4,7 +4,12 @@ body {
   }
   canvas {
     display: block;
+    position: absolute;
     background-color: #ddd;
+    top: 0;
+    left: 0;
+    height: 100vw;
+    width: 100vw;
   }
   .joystick {
     position: absolute;
