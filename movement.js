@@ -1,6 +1,7 @@
 // Canvas i jego ustawienia
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
+const image = new Image();
 
 let canvasWidth = window.innerWidth;
 let canvasHeight = window.innerHeight;
@@ -31,6 +32,13 @@ const joystick = document.getElementById('joystick');
 const joystickHandle = document.getElementById('joystickHandle');
 let joystickCenter = { x: 0, y: 0 }; // Centrum joysticka
 let dragging = false;
+
+
+image.addEventListener("load", () =>{
+  ctx.drawImage(image,0,0);
+})
+
+image.src = "parter.jpg";
 
 // Pozycjonowanie joysticka
 function updateJoystickCenter() {
