@@ -140,3 +140,5 @@ function gameLoop() {
 
 // Start gry
 gameLoop();
+
+

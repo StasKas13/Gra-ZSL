@@ -1,6 +1,11 @@
 body {
     margin: 0;
     overflow: hidden;
+    background-image: url('Szkoła\ parter.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
   canvas {
     display: block;
