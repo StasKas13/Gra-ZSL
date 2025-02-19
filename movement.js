@@ -6,6 +6,11 @@ const image = new Image();
 let canvasWidth = window.innerWidth;
 let canvasHeight = window.innerHeight;
 
+image.src = "parter.jpg";
+
+image.addEventListener("load", () =>{
+  ctx.drawImage(image,0,0);
+})
 // Aktualizacja rozmiaru canvasu
 function resizeCanvas() {
   canvasWidth = window.innerWidth;
@@ -34,11 +39,7 @@ let joystickCenter = { x: 0, y: 0 }; // Centrum joysticka
 let dragging = false;
 
 
-image.addEventListener("load", () =>{
-  ctx.drawImage(image,0,0);
-})
 
-image.src = "parter.jpg";
 
 // Pozycjonowanie joysticka
 function updateJoystickCenter() {
