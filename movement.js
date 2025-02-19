@@ -6,7 +6,7 @@ const image = new Image();
 let canvasWidth = window.innerWidth;
 let canvasHeight = window.innerHeight;
 
-image.src = "parter.jpg";
+image.src = "Szkoła\parter.jpg";
 
 image.addEventListener("load", () =>{
   ctx.drawImage(image,0,0);
@@ -142,3 +142,16 @@ function gameLoop() {
 gameLoop();
 
 
+function isInsideImage(x, y) {
+  const imgData = ctx.getImageData(x, y, 1, 1).data;
+  return !(imgData[0] === 0 && imgData[1] === 0 && imgData[2] === 0); // Odrzuca białe piksele
+}
+
+canvas.addEventListener('mousemove', (e) => {
+  const x = e.offsetX;
+  const y = e.offsetY;
+  if (isInsideImage(x, y)) {
+      ctx.fillStyle = 'blue';
+      ctx.fillRect(x, y, 5, 5);
+  }
+});
