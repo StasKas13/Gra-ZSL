@@ -4,17 +4,14 @@ const ctx = canvas.getContext('2d');
 const image = new Image();
 
 let canvasWidth = window.innerWidth;
-let canvasHeight = window.innerHeight;
+let canvasHeight = window.innerHeight - 5; // Odejmij 5 pikseli od dołu
 
 image.src = "parter.jpg";
 
-image.addEventListener("load", () =>{
-  ctx.drawImage(image,0,0);
-})
 // Aktualizacja rozmiaru canvasu
 function resizeCanvas() {
   canvasWidth = window.innerWidth;
-  canvasHeight = window.innerHeight;
+  canvasHeight = window.innerHeight - 5; // 5 pikseli od dolnej krawędzi
   canvas.width = canvasWidth;
   canvas.height = canvasHeight;
 }
@@ -37,9 +34,6 @@ const joystick = document.getElementById('joystick');
 const joystickHandle = document.getElementById('joystickHandle');
 let joystickCenter = { x: 0, y: 0 }; // Centrum joysticka
 let dragging = false;
-
-
-
 
 // Pozycjonowanie joysticka
 function updateJoystickCenter() {
@@ -121,6 +115,10 @@ function updatePlayer() {
 }
 
 // Renderowanie
+function drawBackground() {
+  ctx.drawImage(image, 0, 0, canvasWidth, canvasHeight); // Dopasuj tło do wymiarów canvasu
+}
+
 function drawPlayer() {
   ctx.fillStyle = player.color;
   ctx.fillRect(player.x, player.y, player.size, player.size); // Zawsze kwadrat
@@ -133,10 +131,13 @@ function clearCanvas() {
 // Pętla gry
 function gameLoop() {
   clearCanvas(); // Czyść ekran
-  updatePlayer(); // Zaktualizuj gracza
+  drawBackground(); // Rysuj tło
+  updatePlayer(); // Zaktualizuj pozycję gracza
   drawPlayer(); // Narysuj gracza
   requestAnimationFrame(gameLoop); // Kontynuuj pętlę
 }
 
-// Start gry
-gameLoop();
+// Start gry po załadowaniu obrazu tła
+image.onload = () => {
+  gameLoop();
+};
