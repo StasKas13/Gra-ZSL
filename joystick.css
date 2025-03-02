@@ -1,11 +1,14 @@
 body {
     margin: 0;
     overflow: hidden;
-    background-image: url('Szkoła\ parter.jpg');
+    background-image: url('Szkoła parter.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: fixed; 
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
   }
   canvas {
     display: block;
@@ -16,7 +19,7 @@ body {
     width: 100vw;
   }
   .joystick {
-    position: absolute;
+    position: fixed;
     bottom: 50px;
     left: 50px;
     width: 150px;
@@ -35,3 +38,4 @@ body {
     right: 50%;
     transform: translate(-50%, -50%);
   }
+

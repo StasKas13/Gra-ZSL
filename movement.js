@@ -1,12 +1,14 @@
 // Canvas i jego ustawienia
 const canvas = document.getElementById('gameCanvas');
+const player = document.getElementById('player');
 const ctx = canvas.getContext('2d');
 const image = new Image();
+
 
 let canvasWidth = window.innerWidth;
 let canvasHeight = window.innerHeight;
 
-image.src = "Szkoła\parter.jpg";
+image.src = "Szkoła/parter.jpg"; 
 
 image.addEventListener("load", () =>{
   ctx.drawImage(image,0,0);
@@ -22,14 +24,14 @@ resizeCanvas();
 window.addEventListener('resize', resizeCanvas);
 
 // Gracz
-const player = {
-  x: 100,
-  y: 100,
-  size: 50, // Rozmiar gracza (kwadrat)
-  color: 'blue',
-  speed: 3,
+player = {
+  x: 625,
+  y: 790,
+  size: 50,
+  speed: 6,
   dx: 0,
   dy: 0,
+  color: "blue"
 };
 
 // Joystick
@@ -44,6 +46,7 @@ let dragging = false;
 // Pozycjonowanie joysticka
 function updateJoystickCenter() {
   const rect = joystick.getBoundingClientRect();
+  
   joystickCenter = {
     x: rect.left + rect.width / 2,
     y: rect.top + rect.height / 2,
@@ -140,18 +143,3 @@ function gameLoop() {
 
 // Start gry
 gameLoop();
-
-
-function isInsideImage(x, y) {
-  const imgData = ctx.getImageData(x, y, 1, 1).data;
-  return !(imgData[0] === 0 && imgData[1] === 0 && imgData[2] === 0); // Odrzuca białe piksele
-}
-
-canvas.addEventListener('mousemove', (e) => {
-  const x = e.offsetX;
-  const y = e.offsetY;
-  if (isInsideImage(x, y)) {
-      ctx.fillStyle = 'blue';
-      ctx.fillRect(x, y, 5, 5);
-  }
-});

@@ -1,18 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gra ZSL</title>
   <link rel="stylesheet" href="joystick.css">
+  <link rel="stylesheet" href="planszkoly.css">
 </head>
 <body>
-  <canvas id="gameCanvas"></canvas>
+  <script src="movement.js"></script>
 
+  <canvas id="gameCanvas"></canvas>
   <div class="joystick" id="joystick">
     <div class="joystick-handle" id="joystickHandle"></div>
   </div>
 
-  <script src="movement.js"></script>
+  
+
+  <div class="container" id="container">
+    <div class="player" id="player"></div>
+    <div class="all" id="all">
+      <div class="hol" id="hol"></div>
+      <div class="lazienka" id="lazienka"></div>
+      <div class="lazienka2" id="lazienka2"></div>
+      <div class="schody" id="schody"></div>
+      <div class="sale" id="sale"></div>
+      <div class="samoksztalceniowa" id="samoksztalceniowa"></div>
+      <div class="dyrektorzy" id="dyrektorzy"></div>
+  </div>
+</div>
+
+ 
+
+
+
+  
 </body>
 </html>
