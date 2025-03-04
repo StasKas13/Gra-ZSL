@@ -1,19 +1,18 @@
-// Canvas i jego ustawienia
+// Pobranie elementów
 const canvas = document.getElementById('gameCanvas');
-const player = document.getElementById('player');
 const ctx = canvas.getContext('2d');
 const image = new Image();
-
+const player = document.getElementById("player");
 
 let canvasWidth = window.innerWidth;
 let canvasHeight = window.innerHeight - 5; // Odejmij 5 pikseli od dołu
 
-image.src = "Szkoła/parter.jpg"; 
+image.src = "Szkoła/parter.jpg"; // Ścieżka do obrazu
 
 // Aktualizacja rozmiaru canvasu
 function resizeCanvas() {
   canvasWidth = window.innerWidth;
-  canvasHeight = window.innerHeight - 5; // 5 pikseli od dolnej krawędzi
+  canvasHeight = window.innerHeight - 5;
   canvas.width = canvasWidth;
   canvas.height = canvasHeight;
 }
@@ -34,83 +33,76 @@ player = {
 // Joystick
 const joystick = document.getElementById('joystick');
 const joystickHandle = document.getElementById('joystickHandle');
-let joystickCenter = { x: 0, y: 0 }; // Centrum joysticka
+let joystickCenter = { x: 0, y: 0 };
 let dragging = false;
 
 // Pozycjonowanie joysticka
 function updateJoystickCenter() {
   const rect = joystick.getBoundingClientRect();
-  
   joystickCenter = {
     x: rect.left + rect.width / 2,
     y: rect.top + rect.height / 2,
   };
 }
-updateJoystickCenter();
 window.addEventListener('resize', updateJoystickCenter);
+window.addEventListener('load', () => setTimeout(updateJoystickCenter, 500)); // Opóźnienie na poprawne ustawienie
 
-// Obsługa myszy na joysticku
-joystick.addEventListener('mousedown', (e) => {
+// Obsługa dotyku i myszy na joysticku
+function handleJoystickStart(event) {
   dragging = true;
-  handleJoystickMove(e.clientX, e.clientY);
-});
-window.addEventListener('mousemove', (e) => {
-  if (dragging) {
-    handleJoystickMove(e.clientX, e.clientY);
-  }
-});
-window.addEventListener('mouseup', () => {
-  dragging = false;
-  resetJoystick();
-});
+  let x = event.clientX || event.touches[0].clientX;
+  let y = event.clientY || event.touches[0].clientY;
+  handleJoystickMove(x, y);
+}
 
-// Obsługa dotyku na joysticku
-joystick.addEventListener('touchstart', (e) => {
-  dragging = true;
-  handleJoystickMove(e.touches[0].clientX, e.touches[0].clientY);
-});
-joystick.addEventListener('touchmove', (e) => {
-  if (dragging) {
-    handleJoystickMove(e.touches[0].clientX, e.touches[0].clientY);
-  }
-});
-joystick.addEventListener('touchend', () => {
-  dragging = false;
-  resetJoystick();
-});
-
-// Obsługa joysticka
 function handleJoystickMove(cursorX, cursorY) {
+  if (!dragging) return;
+
   const dx = cursorX - joystickCenter.x;
   const dy = cursorY - joystickCenter.y;
 
-  // Ograniczenie uchwytu joysticka do okręgu
-  const distance = Math.min(Math.sqrt(dx * dx + dy * dy), 75); // 75 to promień joysticka
+  // Ograniczenie do okręgu o promieniu 75px
+  const distance = Math.min(Math.sqrt(dx * dx + dy * dy), 75);
   const angle = Math.atan2(dy, dx);
 
-  // Pozycja uchwytu
+  // Ustawienie uchwytu joysticka
   joystickHandle.style.transform = `translate(
     ${Math.cos(angle) * distance}px, 
     ${Math.sin(angle) * distance}px
   )`;
 
-  // Oblicz kierunek ruchu
+  // Aktualizacja ruchu gracza
   player.dx = Math.cos(angle) * (distance / 75) * player.speed;
   player.dy = Math.sin(angle) * (distance / 75) * player.speed;
 }
 
+// Resetowanie joysticka
 function resetJoystick() {
   joystickHandle.style.transform = 'translate(-50%, -50%)';
   player.dx = 0;
   player.dy = 0;
+  dragging = false;
 }
+
+// Obsługa eventów joysticka
+joystick.addEventListener('mousedown', handleJoystickStart);
+joystick.addEventListener('touchstart', handleJoystickStart);
+
+window.addEventListener('mousemove', (e) => {
+  if (dragging) handleJoystickMove(e.clientX, e.clientY);
+});
+window.addEventListener('touchmove', (e) => {
+  if (dragging) handleJoystickMove(e.touches[0].clientX, e.touches[0].clientY);
+});
+
+window.addEventListener('mouseup', resetJoystick);
+window.addEventListener('touchend', resetJoystick);
 
 // Aktualizacja pozycji gracza
 function updatePlayer() {
   player.x += player.dx;
   player.y += player.dy;
 
-  // Utrzymanie gracza w obszarze canvasu (z uwzględnieniem jego rozmiaru)
   if (player.x < 0) player.x = 0;
   if (player.x + player.size > canvasWidth) player.x = canvasWidth - player.size;
   if (player.y < 0) player.y = 0;
@@ -119,12 +111,12 @@ function updatePlayer() {
 
 // Renderowanie
 function drawBackground() {
-  ctx.drawImage(image, 0, 0, canvasWidth, canvasHeight); // Dopasuj tło do wymiarów canvasu
+  ctx.drawImage(image, 0, 0, canvasWidth, canvasHeight);
 }
 
 function drawPlayer() {
   ctx.fillStyle = player.color;
-  ctx.fillRect(player.x, player.y, player.size, player.size); // Zawsze kwadrat
+  ctx.fillRect(player.x, player.y, player.size, player.size);
 }
 
 function clearCanvas() {
@@ -133,14 +125,15 @@ function clearCanvas() {
 
 // Pętla gry
 function gameLoop() {
-  clearCanvas(); // Czyść ekran
-  drawBackground(); // Rysuj tło
-  updatePlayer(); // Zaktualizuj pozycję gracza
-  drawPlayer(); // Narysuj gracza
-  requestAnimationFrame(gameLoop); // Kontynuuj pętlę
+  clearCanvas();
+  drawBackground();
+  updatePlayer();
+  drawPlayer();
+  requestAnimationFrame(gameLoop);
 }
 
-// Start gry po załadowaniu obrazu tła
+// Start gry po załadowaniu obrazu
 image.onload = () => {
+  updateJoystickCenter();
   gameLoop();
 };
