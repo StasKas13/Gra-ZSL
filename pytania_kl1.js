@@ -206,5 +206,260 @@ let questions = {
       "odpowiedzi": ["DATE", "TEXT", "DATETIME", "TIME"],
       "poprawna": 0
     }
-  ]
+  ],
+  "Język polski": [
+    {
+      "pytanie": "Jakie idee głosił renesans w literaturze?",
+      "odpowiedzi": ["Kult religii i ascetycznego życia", "Humanizm i afirmacja życia", "Powszechna rezygnacja z twórczości artystycznej", "Zainteresowanie tematyką apokaliptyczną"],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Wymień cechy tragedii antycznej.",
+      "odpowiedzi": ["Oparta na zasadzie trzech jedności i katharsis", "Opowiada o codziennym życiu mieszczan", "Zawsze kończy się szczęśliwie", "Obejmuje tylko jedną postać"],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Jakie były najważniejsze motywy baroku?",
+      "odpowiedzi": ["Prostota i harmonia", "Kontrast, przemijalność, religijność", "Tylko opisy natury", "Wyłącznie tematyka polityczna"],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Co to jest ballada?",
+      "odpowiedzi": ["Powieść przygodowa", "Utwork epicko-liryczny z elementami dramatycznymi", "Pieśń religijna", "Wyłącznie utwór dramatyczny"],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Co to jest realizm w literaturze?",
+      "odpowiedzi": ["Szczegółowe ukazanie rzeczywistości", "Idealizacja świata", "Przedstawianie tylko wydarzeń historycznych", "Brak narratora"],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Wyjaśnij pojęcie 'carpe diem' i podaj przykład utworu, który je zawiera.",
+      "odpowiedzi": ["Pojęcie zachęty do rozwoju", "Pojęcie zachęty do chwytania okazji", "Pojęcie odwołujące się do religijności", "Pojęcie pochwały rozumu"],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Co to jest archaizm i w jakim celu się go stosuje?",
+      "odpowiedzi": ["Nowoczesne słowo, które nadaje tekstowi oryginalność", "Słowo, które wyszło z użycia, używane dla nadania tekstowi charakteru starszej epoki", "Często używane w poezji miłosnej w celach estetycznych", "Nowy wyraz, który wprowadza świeży styl do literatury"],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Czym charakteryzuje się przypowieść?",
+      "odpowiedzi": ["Zawiera dialogi i podział na akty", "Bohaterowie są zwierzętami i zawsze występuje morał", "Ma znaczenie dosłowne i symboliczne", "Jest to utwór teatralny, w którym ukazane są konflikty między różnymi postaciami."],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Co to jest podmiot w zdaniu?",
+      "odpowiedzi": ["Wykonawca czynności", "Przedmiot", "Czasownik", "Przymiotnik"],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Co to jest epitet?",
+      "odpowiedzi": ["Określenie rzeczownika podkreślające jego cechy", "Wyraz o przeciwnym znaczeniu", "Rodzaj przypowieści", "Jest to forma rymu, wykorzystywana w poezji."],
+      "poprawna": 1
+    }
+  ],
+  "Język angielski": [
+    {
+      "pytanie": "How do you form the past simple tense of regular verbs?",
+      "odpowiedzi": ["Add '-ed' to the base form of the verb.", "Add 'was/were' before the verb.", "Use the infinitive form of the verb.", "Add 'ing' to the base form."],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "What are the three forms of the verb 'go'?",
+      "odpowiedzi": ["Go, going, gone", "Go, went, gone", "Go, goes, gone", "Go, goes, went"],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "What are the question words in English?",
+      "odpowiedzi": ["Who, when, where, what, why, how", "He, she, it, they", "Is, am, are", "I, we, you"],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "What is the past participle of 'write'?",
+      "odpowiedzi": ["Wrote", "Writing", "Written", "Writes"],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "How do you form the future tense in English?",
+      "odpowiedzi": ["Using 'will' or 'going to'", "By adding 'will' after the subject", "By adding 'ing' to the base verb", "By using the present tense"],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "What is the difference between 'since' and 'for'?",
+      "odpowiedzi": ["'Since' refers to a specific point in time, while 'for' refers to a duration.", "'Since' refers to a duration, while 'for' refers to a specific point in time.", "'Since' is used only for past events, while 'for' is for present events.", "'Since' is for negative sentences, while 'for' is for positive sentences."],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "How do you form a question in the present perfect tense?",
+      "odpowiedzi": ["Have/has + past participle + subject?", "Subject + have/has + past participle?", "Have/has + subject + past participle?", "Past participle + subject + have/has?"],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "What is the structure of a conditional sentence type 1?",
+      "odpowiedzi": ["If + present simple, will + base verb", "If + past simple, would + base verb", "If + present continuous, will + base verb", "If + future simple, will + base verb"],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "How do you ask for directions in English?",
+      "odpowiedzi": ["By asking 'Where are you going?'", "By asking 'How can I get to...?'","By using phrases like 'I am going to...'", "By telling your location."],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "What does 'modal verb' mean? Give examples.",
+      "odpowiedzi": ["A verb that indicates tense, e.g. 'has', 'had'.", "A verb that expresses ability, permission, necessity, or possibility, e.g. 'can', 'should', 'must'.", "A verb used only in passive voice.", "A verb that shows actions, e.g. 'run', 'swim'."],
+      "poprawna": 1
+    }
+  ],
+  "Matematyka": [
+    {
+      "pytanie": "Co to jest układ równań liniowych?",
+      "odpowiedzi": ["Zbiór równań, w których występują zmienne pierwszego stopnia.", "Zbiór równań kwadratowych.", "Zbiór nierówności.", "Zbiór równań z jedną zmienną."],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Co to jest funkcja liniowa i jak wygląda jej wykres?",
+      "odpowiedzi": ["Funkcja, której wykres jest prostą.", "Funkcja, której wykres jest parabolą.", "Funkcja, której wykres jest linią łamaną.", "Funkcja, której wykres jest okręgiem."],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Jakie są wzory skróconego mnożenia?",
+      "odpowiedzi": ["(a+b)² = a² + 2ab + b².", "(a-b)² = a² - 2ab + b².", "a² - b² = (a-b)(a+b).", "Wszystkie powyższe."],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Jak obliczyć pole koła?",
+      "odpowiedzi": ["Pi razy promień do kwadratu.", "Pi razy średnica.", "Promień razy promień.", "Pi razy średnica do kwadratu."],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Co to jest logarytm i jakie są jego właściwości?",
+      "odpowiedzi": ["Logarytm to odwrotność potęgowania.", "Logarytm to funkcja liniowa.", "Logarytm zawsze daje wynik większy od 1.", "Logarytm to funkcja kwadratowa."],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Co to jest funkcja kwadratowa i jak wygląda jej wykres?",
+      "odpowiedzi": ["Funkcja, której wykres jest parabolą.", "Funkcja o stałej wartości.", "Funkcja, której wykres jest prostą.", "Funkcja o wykresie zygzakowatym."],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Jak obliczyć objętość prostopadłościanu?",
+      "odpowiedzi": ["Długość razy szerokość razy wysokość.", "Długość razy szerokość.", "Długość razy wysokość.", "Szerokość razy wysokość."],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Jakie są podstawowe własności figur geometrycznych?",
+      "odpowiedzi": ["Każda figura ma określoną liczbę boków i kątów.", "Figury mają różne obwody i pola.", "Figury mogą mieć symetrię osiową i środkową.", "Wszystkie odpowiedzi są poprawne."],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Co to jest średnia arytmetyczna?",
+      "odpowiedzi": ["Suma wszystkich liczb podzielona przez ich ilość.", "Największa liczba w zbiorze.", "Liczba środkowa w zbiorze.", "Suma liczb pomnożona przez ich ilość."],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Jakie są właściwości potęg?",
+      "odpowiedzi": ["Potęgowanie jest działaniem odwrotnym do pierwiastkowania.", "Potęgowanie nie zmienia wartości liczby.", "Potęgi z wykładnikami równymi 1 zawsze są równe liczbie podstawowej.", "Wszystkie odpowiedzi są poprawne."],
+      "poprawna": 1
+    }
+  ],
+  "Historia": [
+    {
+      "pytanie": "Kto był władcą Macedonii podczas podboju Persji?",
+      "odpowiedzi": ["Aleksander Wielki", "Filip II", "Dionizy Starszy", "Leonidas"],
+      "poprawna": 0
+    },
+    {
+      "pytanie": "W którym roku miała miejsce bitwa pod Termopilami?",
+      "odpowiedzi": ["479 p.n.e.", "490 p.n.e.", "431 p.n.e.", "480 p.n.e."],
+      "poprawna": 3
+    },
+    {
+      "pytanie": "Kiedy miała miejsce wyprawa Krzysztofa Kolumba do Ameryki?",
+      "odpowiedzi": ["1492", "1453", "1479", "1517"],
+      "poprawna": 0
+    },
+    {
+      "pytanie": "Kiedy miała miejsce bitwa pod Cedynią, jedno z pierwszych zwycięstw Polski nad Niemcami?",
+      "odpowiedzi": ["911", "1025", "973", "1000"],
+      "poprawna": 2
+    },
+    {
+      "pytanie": "W jakim roku Polska została podzielona na dzielnice w wyniku rozbicia dzielnicowego?",
+      "odpowiedzi": ["1025", "1138", "1234", "1295"],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Kto był autorem 'O obrotach ciał niebieskich'?",
+      "odpowiedzi": ["Kopernik", "Galileusz", "Kepler", "Newton"],
+      "poprawna": 0
+    },
+    {
+      "pytanie": "Kto był ostatnim królem Polski przed rozbiorami?",
+      "odpowiedzi": ["August II Mocny", "Stanisław August Poniatowski", "Kazimierz Wielki", "Władysław Jagiełło"],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "W którym roku wybuchła rewolucja francuska?",
+      "odpowiedzi": ["1776", "1789", "1804", "1848"],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Kto był pierwszym prezydentem Stanów Zjednoczonych?",
+      "odpowiedzi": ["Thomas Jefferson", "Abraham Lincoln", "George Washington", "John Adams"],
+      "poprawna": 2
+    },
+    {
+      "pytanie": "Co to był plan Marshalla?",
+      "odpowiedzi": ["Pomoc finansowa dla krajów europejskich po II wojnie światowej", "Plan rozwoju gospodarczego USA", "Program rozbrojeniowy po zimnej wojnie", "Inicjatywa militarnego wsparcia dla NATO"],
+      "poprawna": 0
+    }
+  ],
+  "Biologia": [
+    {
+      "pytanie": "Jakie są funkcje białek w organizmie?",
+      "odpowiedzi": ["Przechowywanie energii", "Przenoszenie informacji genetycznej", "Budowa ciała, transport, reakcje enzymatyczne", "Synteza hormonów"],
+      "poprawna": 2
+    },
+    {
+      "pytanie": "Jakie są podstawowe cechy organizmów żywych?",
+      "odpowiedzi": ["Umiejętność poruszania się", "Zdolność do rozmnażania, wzrostu, reakcji na bodźce", "Zdolność do latania", "Zdolność do poszukiwania pokarmu"],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Co to jest DNA i jaka jest jego rola?",
+      "odpowiedzi": ["Białko odpowiedzialne za metabolizm", "Materiał genetyczny, który przechowuje informację o budowie organizmu", "Cząsteczka odpowiedzialna za oddychanie komórkowe", "Tłuszcz pełniący rolę magazynu energii"],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Co to jest osmoza i dyfuzja?",
+      "odpowiedzi": ["Osmoza to rozpuszczanie substancji w wodzie, a dyfuzja to przepływ wody przez błony", "Osmoza to przemieszczanie cząsteczek wody przez błonę półprzepuszczalną, dyfuzja to rozprzestrzenianie się cząsteczek", "Osmoza i dyfuzja to procesy wchłaniania pokarmu", "Osmoza to transport białek, a dyfuzja to rozprzestrzenianie gazów"],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Co to jest homeostaza?",
+      "odpowiedzi": ["Stan równowagi organizmu, który utrzymuje stałe warunki wewnętrzne", "Proces adaptacji do zmieniającego się środowiska", "Mechanizm naprawy uszkodzonych komórek", "Proces wydzielania hormonów"],
+      "poprawna": 0
+    },
+    {
+      "pytanie": "Jakie są etapy oddychania komórkowego?",
+      "odpowiedzi": ["Fermentacja, glikoliza, cykl Krebsa, łańcuch oddechowy", "Wdech, wydech, metabolizm", "Tworzenie ATP, synteza glukozy, oddychanie tlenowe", "Rozkład białek, wytwarzanie energii, oddychanie"],
+      "poprawna": 0
+    },
+    {
+      "pytanie": "Jakie są funkcje układu nerwowego?",
+      "odpowiedzi": ["Transport substancji pokarmowych do komórek", "Reakcja na bodźce, koordynacja czynności organizmu", "Produkcja hormonów, regulacja metabolizmu", "Regulowanie ciśnienia krwi"],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Jak działa układ odpornościowy człowieka?",
+      "odpowiedzi": ["Produkuje hormony regulujące funkcje organizmu", "Zapobiega chorobom, rozpoznaje i zwalcza patogeny", "Odpowiada za ruch w organizmach", "Odpowiada za transport gazów oddechowych"],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Jakie są poziomy organizacji życia?",
+      "odpowiedzi": ["Cząsteczki, atomy, komórki, organizmy, ekosystemy", "Białka, komórki, organizmy, biomy, ekosystemy", "Atomy, molekuły, komórki, tkanki, organizmy", "Komórki, tkanki, organy, układy, organizmy"],
+      "poprawna": 3
+    }
+  ]  
 };
