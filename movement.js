@@ -6,13 +6,13 @@ const gameArea = document.getElementById("all");
 let player = { x: 625, y: 790, speed: 6, dx: 0, dy: 0 };
 let joystickCenter = { x: 0, y: 0 }, dragging = false;
 
-// 🔄 Aktualizacja pozycji joysticka
+//  Aktualizacja pozycji joysticka
 const updateJoystickCenter = () => {
   const rect = joystick.getBoundingClientRect();
   joystickCenter = { x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 };
 };
 
-// 🎮 Obsługa joysticka
+//  Obsługa joysticka
 const handleJoystickMove = (x, y) => {
   if (!dragging) return;
 
@@ -27,29 +27,30 @@ const handleJoystickMove = (x, y) => {
   console.log(`Joystick Move → dx: ${player.dx}, dy: ${player.dy}`);
 };
 
-// 🛑 Resetowanie joysticka
+//  Resetowanie joysticka
 const resetJoystick = () => {
   joystickHandle.style.transform = 'translate(-50%, -50%)';
   player.dx = player.dy = 0;
   dragging = false;
 };
 
-// 🎥 Aktualizacja pozycji gracza
+//  Aktualizacja pozycji gracza
 const updatePlayer = () => {
   const gameAreaRect = gameArea.getBoundingClientRect();
+  console.log(`Update player -> width: ${gameAreaRect.width}, ${gameAreaRect.height}`);
+
   player.x = Math.max(0, Math.min(gameAreaRect.width - playerElement.offsetWidth, player.x + player.dx));
   player.y = Math.max(0, Math.min(gameAreaRect.height - playerElement.offsetHeight, player.y + player.dy));
-
 
   playerElement.style.left = `${player.x}px`;
   playerElement.style.top = `${player.y}px`;
   console.log(`Player Position → x: ${player.x}, y: ${player.y}`);
 };
 
-// 🔄 Pętla gry
+//  Pętla gry
 const gameLoop = () => { updatePlayer(); requestAnimationFrame(gameLoop); };
 
-// 🎮 Eventy joysticka
+//  Eventy joysticka
 joystick.addEventListener('mousedown', e => { dragging = true; handleJoystickMove(e.clientX, e.clientY); });
 joystick.addEventListener('touchstart', e => { dragging = true; handleJoystickMove(e.touches[0].clientX, e.touches[0].clientY); });
 
@@ -59,6 +60,6 @@ window.addEventListener('touchmove', e => { if (dragging) handleJoystickMove(e.t
 window.addEventListener('mouseup', resetJoystick);
 window.addEventListener('touchend', resetJoystick);
 
-// 🚀 Start gry
+//  Start gry
 window.onload = () => { updateJoystickCenter(); console.log(`Joystick Center → x: ${joystickCenter.x}, y: ${joystickCenter.y}`); gameLoop(); };
 window.addEventListener('resize', updateJoystickCenter);
