@@ -1,4 +1,4 @@
-// Funkcja losująca pytanie z wybranego przedmiotu
+/*// Funkcja losująca pytanie z wybranego przedmiotu
 function random_question(przedmiot) {
     const pyt_przedmiot = questions[przedmiot];
     const i = Math.floor(Math.random() * pyt_przedmiot.length);
@@ -53,3 +53,44 @@ document.getElementById('biologia').addEventListener('click', function() {
   const p_biol = random_question("Biologia");
   alert(`Pytanie: ${p_biol.pytanie}\n -> ${p_biol.odpowiedzi.join("\n -> ")}`);
 });
+
+// Pobiera pytania z pliku HTML
+function loadQuestions() {
+  const dataElement = document.getElementById("questions-data");
+  return JSON.parse(dataElement.textContent);
+}*/
+
+// Pobiera losowe pytanie z danej kategorii
+function random_question(przedmiot) {
+  const questions = loadQuestions(); // Wczytaj pytania
+  const pytania = questions[przedmiot];
+
+  if (!pytania || pytania.length === 0) {
+      console.error(`Brak pytań dla ${przedmiot}`);
+      return null;
+  }
+
+  const losowe = Math.floor(Math.random() * pytania.length);
+  const pytanie = { ...pytania[losowe] };
+  delete pytanie.poprawna; // Usuwamy poprawną odpowiedź
+  return pytanie;
+}
+
+// Eksportujemy funkcję dla game.js
+window.getQuestion = random_question;
+document.addEventListener("DOMContentLoaded", () => {
+  const dataContainer = document.getElementById("questionData");
+  dataContainer.dataset.questions = JSON.stringify(window.questions);
+});
+
+window.getQuestion = function (przedmiot) {
+  const allQuestions = JSON.parse(document.getElementById("questionData").dataset.questions);
+  if (!allQuestions[przedmiot] || allQuestions[przedmiot].length === 0) {
+      console.error(`Brak pytań dla ${przedmiot}`);
+      return null;
+  }
+  const i = Math.floor(Math.random() * allQuestions[przedmiot].length);
+  const pytanie = { ...allQuestions[przedmiot][i] };
+  delete pytanie.poprawna; // Ukrywamy poprawną odpowiedź
+  return pytanie;
+};
