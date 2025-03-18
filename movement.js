@@ -2,6 +2,32 @@ const playerElement = document.getElementById("player");
 const joystick = document.getElementById('joystick');
 const joystickHandle = document.getElementById('joystickHandle');
 const gameArea = document.getElementById("all");
+const canvas = document.getElementById('gameCanvas');
+const ctx = canvas.getContext('2d');
+
+// Tworzenie nieregularnego kształtu (np. gwiazda)
+ctx.beginPath();
+ctx.moveTo(150, 17);
+ctx.lineTo(300, 150);
+ctx.lineTo(350, 150);
+ctx.lineTo(270, 200);
+ctx.lineTo(300, 300);
+ctx.lineTo(200, 230);
+ctx.lineTo(100, 300);
+ctx.lineTo(130, 200);
+ctx.lineTo(50, 150);
+ctx.lineTo(150, 150);
+ctx.closePath();
+
+// Wypełnienie kształtu kolorem
+ctx.fillStyle = 'lightblue';
+ctx.fill();
+
+// Obramowanie
+ctx.strokeStyle = 'darkblue';
+ctx.lineWidth = 3;
+ctx.stroke();
+
 
 let player = { x: 625, y: 790, speed: 6, dx: 0, dy: 0 };
 let joystickCenter = { x: 0, y: 0 }, dragging = false;
