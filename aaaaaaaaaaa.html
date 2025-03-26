@@ -11,11 +11,11 @@
 <body>
   
 
-  <canvas id="gameCanvas" width="400vh" height="400vh"></canvas>
+  <canvas id="gameCanvas"></canvas>
   <div class="joystick" id="joystick">
     <div class="joystick-handle" id="joystickHandle"></div>
   </div>
-  <button id="chemia" >chrmia</button>
+  <button id="chemia" >chemia</button>
   <button id="geografia">geografia</button>
   <button id="bazy_danych">bazy danych</button>
   <button id="strony_internetowe">strony internetowe</button>
@@ -25,8 +25,9 @@
   <button id="ang">j ang</button>
   <button id="pol">j pol</button>
 
+  
 
-  <div class="container" id="container">
+  <!--<div class="container" id="container">
     <div class="player" id="player"></div>
     <div class="all" id="all">
       <div class="hol" id="hol"></div>
@@ -37,11 +38,36 @@
       <div class="samoksztalceniowa" id="samoksztalceniowa"></div>
       <div class="dyrektorzy" id="dyrektorzy"></div>
   </div>
+</div>-->
+
+<div class="school-map">
+  
+  
+  <!-- Ludzik sterowany joystickiem -->
+  <div id="player" class="player"></div>
+
+  <!-- Sale -->
+  <div id="chemia" class="room" data-subject="Chemia"></div>
+  <div id="matma" class="room" data-subject="Matematyka"></div>
 </div>
 
-<script src="pytania_kl1.js"></script> 
-<script src="pyt.js"></script> 
+<div id="joystick">
+  <div id="joystickHandle"></div>
+</div>
+
+<div id="questionData" style="display: none;"></div>
+<script src="pytania_kl1.js"></script>
+
+
+
+
+<!--<script src="pytania_kl1.js"></script> 
+<script type="module" src="pyt.js"></script> -->
 <script src="movement.js"></script>
+<script src="pyt.js"></script>
+
+
+
   
 </body>
 </html>

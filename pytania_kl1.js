@@ -463,3 +463,4 @@ let questions = {
     }
   ]  
 };
+window.questions = questions; // Udostępniamy globalnie
