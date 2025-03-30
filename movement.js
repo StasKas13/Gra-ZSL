@@ -140,14 +140,3 @@ const gameLoop = () => {
     updatePlayer();
     requestAnimationFrame(gameLoop);
 };
-
-const updatePlayer = () => {
-    player.x = Math.max(0, Math.min(window.innerWidth - 50, player.x + player.dx));
-    player.y = Math.max(0, Math.min(window.innerHeight - 50, player.y + player.dy));
-
-    if (playerElement) {
-        playerElement.style.left = `${player.x}px`;
-        playerElement.style.top = `${player.y}px`;
-        checkCollision();
-    }
-};
