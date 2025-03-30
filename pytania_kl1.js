@@ -464,3 +464,6 @@ let questions = {
   ]  
 };
 window.questions = questions; // Udostępniamy globalnie
+
+console.log("✅ pytania_kl1.js załadowane!");
+console.log("🔍 window.questions:", window.questions);

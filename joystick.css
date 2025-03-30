@@ -8,16 +8,9 @@ body {
   background-attachment: fixed; 
   width: 100vw;
   height: 100vh;
-  margin: 0;
+  
 }
-canvas {
-  display: block;
-  position: absolute; 
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-}
+
 .joystick {
   position: fixed;
   bottom: 50px;
@@ -26,6 +19,7 @@ canvas {
   height: 150px;
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.2);
+  
 }
 .joystick-handle {
   position: absolute;
@@ -39,19 +33,30 @@ canvas {
   transform: translate(-50%, -50%);
 }
 
-.player {
+/*.player {
   width: 50px;
   height: 50px;
   background-color: blue;
-  position: absolute; MUSI BYĆ, żeby działało przesuwanie 
+  position: absolute; 
   top: 790px;
   left: 625px;
+
+  .room {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 0, 0, 0.5);
+  border: 2px solid red;
 }
+}*/
 .school-map {
   position: relative;
   width: 100%;
   max-width: 1200px;
   margin: auto;
+  display: grid;
+  grid-template-columns: repeat(9, 60px);
+  
 }
 
 .school-map img {
@@ -60,19 +65,31 @@ canvas {
   display: block;
 }
 
-.character {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  background-color: blue;
-  border-radius: 50%;
-}
 
-.room {
+#player { 
   position: absolute;
-  width: 60px;
+  width: 30px;
+  height: 30px; 
+  background: red; 
+}
+.room {  
+  width: 55px; 
   height: 60px;
-  background-color: rgba(255, 0, 0, 0.5);
-  border: 2px solid red;
+  background: blue; 
 }
 
+
+#questionBox { 
+  display: none; 
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  background: white; 
+  padding: 20px; 
+  border: 2px solid black;
+}
+button { 
+  margin: 5px; 
+  padding: 5px; 
+}

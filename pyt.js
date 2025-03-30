@@ -1,3 +1,5 @@
+
+
 /*// Funkcja losująca pytanie z wybranego przedmiotu
 function random_question(przedmiot) {
     const pyt_przedmiot = questions[przedmiot];
@@ -58,7 +60,7 @@ document.getElementById('biologia').addEventListener('click', function() {
 function loadQuestions() {
   const dataElement = document.getElementById("questions-data");
   return JSON.parse(dataElement.textContent);
-}*/
+}
 
 // Pobiera losowe pytanie z danej kategorii
 function random_question(przedmiot) {
@@ -93,4 +95,31 @@ window.getQuestion = function (przedmiot) {
   const pytanie = { ...allQuestions[przedmiot][i] };
   delete pytanie.poprawna; // Ukrywamy poprawną odpowiedź
   return pytanie;
+};*/
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    const dataContainer = document.getElementById("questionData");
+    dataContainer.dataset.questions = JSON.stringify(window.questions);
+    console.log("✅ Dane pytań ustawione w dataset.questions", dataContainer.dataset.questions);
+  }, 100);
+});
+window.getQuestion = function (przedmiot) {
+  const rawData = document.getElementById("questionData").dataset.questions;
+  if (!rawData) {
+    console.error("❌ Nie znaleziono danych pytań!");
+    return null;
+  }
+  try {
+    const allQuestions = JSON.parse(rawData);
+    if (!allQuestions[przedmiot] || allQuestions[przedmiot].length === 0) {
+      console.error(`Brak pytań dla ${przedmiot}`);
+      return null;
+    }
+    const i = Math.floor(Math.random() * allQuestions[przedmiot].length);
+    return { ...allQuestions[przedmiot][i] };
+  } catch (error) {
+    console.error("❌ Błąd parsowania JSON w getQuestion:", error);
+    return null;
+  }
 };
+console.log("✅ window.getQuestion jest teraz dostępne!");

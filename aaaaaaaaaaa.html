@@ -11,19 +11,11 @@
 <body>
   
 
-  <canvas id="gameCanvas"></canvas>
+ 
   <div class="joystick" id="joystick">
     <div class="joystick-handle" id="joystickHandle"></div>
   </div>
-  <button id="chemia" >chemia</button>
-  <button id="geografia">geografia</button>
-  <button id="bazy_danych">bazy danych</button>
-  <button id="strony_internetowe">strony internetowe</button>
-  <button id="biologia">biologia</button>
-  <button id="historia">historia</button>
-  <button id="matma">matma</button>
-  <button id="ang">j ang</button>
-  <button id="pol">j pol</button>
+  
 
   
 
@@ -47,8 +39,20 @@
   <div id="player" class="player"></div>
 
   <!-- Sale -->
-  <div id="chemia" class="room" data-subject="Chemia"></div>
-  <div id="matma" class="room" data-subject="Matematyka"></div>
+  <div id="chemia" class="room chemia" data-subject="Chemia"></div>
+  <div id="matma" class="room matma" data-subject="Matematyka"></div>
+  <div id="geografia" class="room geo" data-subject="Geografia"></div>
+  <div id="bazy" class="room bazy" data-subject="Zarządzanie bazami danych"></div>
+  <div id="strony" class="room strony" data-subject="Projektowanie stron internetowych"></div>
+  <div id="biologia" class="room bio" data-subject="Biologia"></div>
+  <div id="historia" class="room hist" data-subject="Historia"></div>
+  <div id="angielski" class="room ang" data-subject="Język angielski"></div>
+  <div id="polski" class="room pol" data-subject="Język polski"></div>
+</div>
+
+<div id="questionBox" class="hidden">
+  <p id="questionText"></p>
+  <div id="answers"></div>
 </div>
 
 <div id="joystick">
@@ -59,15 +63,17 @@
 <script src="pytania_kl1.js"></script>
 
 
-
+<script src="pyt.js"></script>
 
 <!--<script src="pytania_kl1.js"></script> 
 <script type="module" src="pyt.js"></script> -->
 <script src="movement.js"></script>
-<script src="pyt.js"></script>
+
 
 
 
   
 </body>
 </html>
+
+
