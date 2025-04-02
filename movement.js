@@ -109,14 +109,26 @@ const checkAnswer = (chosenIndex, correctIndex) => {
 
     hasAnswered = true; // Oznaczamy, że odpowiedzieliśmy
 
-    if (chosenIndex === correctIndex) {
-        alert("✅ Poprawna odpowiedź!");
-    } else {
-        alert("❌ Zła odpowiedź!");
-    }
+    const buttons = answersContainer.querySelectorAll(".answer-button");
 
-    questionBox.style.display = "none"; // Ukrywamy pytanie po odpowiedzi
+    buttons.forEach((btn, index) => {
+        btn.disabled = true; // Blokujemy przyciski po odpowiedzi
+        if (index === correctIndex) {
+            btn.style.backgroundColor = "green"; // Poprawna odpowiedź -> zielony
+            btn.style.color = "white";
+        }
+        if (index === chosenIndex && index !== correctIndex) {
+            btn.style.backgroundColor = "red"; // Zła odpowiedź -> czerwony
+            btn.style.color = "white";
+        }
+    });
+
+    // Po 2 sekundach zamykamy okno pytania
+    setTimeout(() => {
+        questionBox.style.display = "none";
+    }, 2000);
 };
+
 
 // ** Obsługa joysticka **
 window.addEventListener("resize", updateJoystickCenter);
