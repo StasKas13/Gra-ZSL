@@ -1,4 +1,19 @@
-#boom{
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.all {
+    height: 100vh; /* Cała wysokość widoku */
+    width: 100vw;  /* Cała szerokość widoku */
+    background-image: url('szkola-front.jpg');
+    background-size: cover;        /* Dopasowanie obrazka */
+    background-position: center;   /* Wycentrowanie obrazka */
+    background-repeat: no-repeat;  /* Bez powtarzania */
+}
+
+#boom {
     display: flex;
     flex-direction: row;
     align-items: center;
