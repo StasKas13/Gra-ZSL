@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 window.usedQuestions = {}; // Przechowuje użyte pytania dla każdego przedmiotu
 
->>>>>>> 322e4111ee7c1c4128c47ee250fe183696725ee0
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     const dataContainer = document.getElementById("questionData");

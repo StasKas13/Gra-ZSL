@@ -5,12 +5,12 @@ html, body {
 }
 
 .all {
-    height: 100vh; /* Cała wysokość widoku */
-    width: 100vw;  /* Cała szerokość widoku */
+    height: 100vh; 
+    width: 100vw;  
     background-image: url('szkola-front.jpg');
-    background-size: cover;        /* Dopasowanie obrazka */
-    background-position: center;   /* Wycentrowanie obrazka */
-    background-repeat: no-repeat;  /* Bez powtarzania */
+    background-size: cover;       
+    background-position: center;   
+    background-repeat: no-repeat;  
 }
 
 #boom {
