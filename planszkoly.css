@@ -1,50 +1,66 @@
 body {
-    width: 100%;
-    height: 100vh;
     margin: 0;
-}
-.all{
-    margin: 9vh auto 0 auto;
-    display: grid;
-    grid-template-columns: 16vw 5vw 14vw 18vw 8vw;
-    grid-template-rows: 25vh 17vh 5vh 7vh 7vh 3vh 4vh 11vh;
-    width: fit-content;
-    max-width: 1200px;
-} 
-.hol{
-    background-color: green;
-    grid-column: 4 / 5;
-    grid-row: 1 / 9;
-}
-
-.sale{
-    background-color: rgb(122, 128, 0);
-    grid-column: 1 / 4;
-    grid-row: 2 / 3;
-}
-/* .sala_p{
-    background-color: maroon;
-    grid-column: 5 / 6;
-    grid-row: 2 / 4;
-}
-.dyrektorzy{
-    background-color: plum;
-    grid-column: 5 / 6;
-    grid-row: 4 / 5;
-}
-.schody{
-    background-color: palegreen;
-    grid-column: 3 / 4;
-    grid-row: 4 / 6;
-}
-.lazienka{
-    background-color: palevioletred;
-} */
-/* .left{
-    grid-column: 2 / 3;
-    grid-row: 8 / 9;
-}
-.right{
-    grid-column: 3 / 4;
-    grid-row: 7 / 9;
-} */
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+  }
+  
+  .map-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Mapa jako tło przesunięte na dół */
+  .map-container img.map-image {
+    position: absolute;
+    top: 0; /* lub top: 50px; jak chcesz niżej */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* to sprawia, że jest pod spodem */
+  }
+  .block {
+    position: relative;
+    background-color: rgba(0, 0, 255, 0.3);
+  }
+  #sale {
+    top: 35%;
+    left: 23%;
+    width: 26%;
+    height: 18%;
+  }
+  
+  #hol {
+    top: -9%;
+    left: 49%;
+    width: 14%;
+    height: 83%;
+  }
+  #dyr {
+      top: -67%;
+      left: 63%;
+      width: 8%;
+      height: 31%;
+    }
+  #schody{
+      top: -74.5%;
+      left: 43.5%;
+      width: 5.5%;
+      height: 14%;
+  }
+  
+  #laz_l{
+      top: -86%;
+      left: 38.3%;
+      width: 5.3%;
+      height: 14%;
+  }
+  #laz_p{
+      top: -72%;
+      left: 43.5%;
+      width: 5.5%;
+      height: 18%;
+  }

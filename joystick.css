@@ -1,4 +1,5 @@
 body {
+  /*
   margin: 0;
   overflow: hidden;
   background-image: url('Szkoła parter.jpg');
@@ -6,6 +7,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed; 
+  */
   width: 100vw;
   height: 100vh;
   position: absolute;
@@ -19,7 +21,6 @@ body {
   height: 150px;
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.2);
-  
 }
 .joystick-handle {
   position: absolute;
@@ -50,13 +51,13 @@ body {
 }
 }*/
 .school-map {
-  position: static;
+  position: absolute;
   width: 100%;
   max-width: 1200px;
   margin: auto;
-  /* display: grid; */
+  display: grid;
   grid-template-columns: repeat(9, 60px);
-  
+  top: 0px;
 }
 
 .school-map img {
@@ -65,28 +66,26 @@ body {
   display: block;
 }
 
-
-#player { 
+#player {
   position: absolute;
   width: 30px;
-  height: 30px; 
-  background: red; 
+  height: 30px;
+  background: red;
 }
-.room {  
-  width: 55px; 
+.room {
+  width: 55px;
   height: 60px;
-  background: blue; 
+  background: blue;
 }
 
-
-#questionBox { 
-  display: none; 
-  position: absolute; 
-  top: 50%; 
-  left: 50%; 
+#questionBox {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  background: white; 
-  padding: 20px; 
+  background: white;
+  padding: 20px;
   border: 2px solid black;
 }
 .answer-button {
@@ -101,4 +100,3 @@ body {
 .answer-button:hover {
   background-color: lightgray;
 }
-

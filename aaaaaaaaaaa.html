@@ -9,21 +9,23 @@
   <link rel="stylesheet" href="pyt.css">
 </head>
 <body>
+  <div id="main_div" class="map-container" style="display: flex; justify-content: center;align-items: center; background-color: white;">
+    <div id="bg" style="background-image: url('Szkoła parter.jpg'); background-repeat: no-repeat; background-size: cover;"">
+    <div class="block" id="sale"></div>
+    <div class="block" id="hol"></div>
+    <div class="block" id="dyr"></div>
+    <div class="block" id="schody"></div>
+    <div class="block" id="laz_p"></div>
+    <div class="block" id="laz_l"></div>
+  </div>
+    
+
+  </div>
+  
   <div class="joystick" id="joystick">
     <div class="joystick-handle" id="joystickHandle"></div>
   </div>
-
-    <div class="all" id="all">
-      <div class="hol" id="hol"></div>
-      <div class="sale" id="sale"></div>
-      <div class="sala_p" id="sala_p"></div>
-      <div class="dyrektorzy" id="dyrektorzy"></div>
-      <div class="schody" id="schody"></div>
-      <div class="lazienka left" id="lazienka"></div>
-      <div class="lazienka right" id="lazienka"></div>
-  </div>
-
-
+  
 <div class="school-map">
   
   
@@ -47,8 +49,6 @@
   <div id="answers"></div>
 </div>
 
-<div id="joystick">
-  <div id="joystickHandle"></div>
 </div>
 
 <div id="questionData" style="display: none;"></div>
@@ -60,9 +60,17 @@
 <!--<script src="pytania_kl1.js"></script> 
 <script type="module" src="pyt.js"></script> -->
 <script src="movement.js"></script>
+<script>
+  function reiszemybg() {
+    md = document.getElementById('main_div');
+    bg = document.getElementById('bg');
 
-
-
+    bg.style.width = md.offsetWidth + "px";
+    bg.style.height = (((md.offsetWidth)/ 1980) * 1080) + "px";
+  }
+  window.addEventListener("resize", reiszemybg);
+  window.addEventListener('load', reiszemybg);
+</script>
 
   
 </body>
