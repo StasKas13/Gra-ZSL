@@ -75,6 +75,17 @@
   window.addEventListener("resize", reiszemybg);
   window.addEventListener('load', reiszemybg);
 </script>
+<script>
+  function reiszemybg() {
+    md = document.getElementById('main_div');
+    bg = document.getElementById('bg');
+
+    bg.style.width = md.offsetWidth + "px";
+    bg.style.height = (((md.offsetWidth)/ 1980) * 1080) + "px";
+  }
+  window.addEventListener("resize", reiszemybg);
+  window.addEventListener('load', reiszemybg);
+</script>
 
   
 </body>
