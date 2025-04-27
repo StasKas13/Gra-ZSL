@@ -13,6 +13,16 @@ html, body {
     background-repeat: no-repeat;  
 }
 
+.all button{
+    top: 73%;
+    left: 45%;
+    height:120px;
+    width:250px;
+    border-radius: 5%;
+    background-color:aliceblue;
+    position: absolute;
+}
+
 #boom {
     display: flex;
     flex-direction: row;

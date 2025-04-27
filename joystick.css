@@ -1,4 +1,5 @@
 body {
+  /*
   margin: 0;
   overflow: hidden;
   background-image: url('Szkoła parter.jpg');
@@ -6,6 +7,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed; 
+  */
   width: 100vw;
   height: 100vh;
   position: absolute;
@@ -19,7 +21,6 @@ body {
   height: 150px;
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.2);
-  
 }
 .joystick-handle {
   position: absolute;
@@ -33,30 +34,14 @@ body {
   transform: translate(-50%, -50%);
 }
 
-/*.player {
-  width: 50px;
-  height: 50px;
-  background-color: blue;
-  position: absolute; 
-  top: 790px;
-  left: 625px;
-
-  .room {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  background-color: rgba(255, 0, 0, 0.5);
-  border: 2px solid red;
-}
-}*/
 .school-map {
-  position: static;
+  position: absolute;
   width: 100%;
   max-width: 1200px;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(9, 60px);
-  
+  top: 0px;
 }
 
 .school-map img {
@@ -65,28 +50,22 @@ body {
   display: block;
 }
 
-
-#player { 
+#player {
   position: absolute;
   width: 30px;
-  height: 30px; 
-  background: red; 
-}
-.room {  
-  width: 55px; 
-  height: 60px;
-  background: blue; 
+  height: 30px;
+  background: red;
 }
 
 
-#questionBox { 
-  display: none; 
-  position: absolute; 
-  top: 50%; 
-  left: 50%; 
+#questionBox {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  background: white; 
-  padding: 20px; 
+  background: white;
+  padding: 20px;
   border: 2px solid black;
 }
 .answer-button {
@@ -101,4 +80,122 @@ body {
 .answer-button:hover {
   background-color: lightgray;
 }
+/* -------------------------------------------------- */
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+}
 
+.map-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Mapa jako tło przesunięte na dół */
+.map-container img.map-image {
+  position: relative;
+  top: 0; /* lub top: 50px; jak chcesz niżej */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* to sprawia, że jest pod spodem */
+}
+.block {
+  position: relative;
+  background-color: rgba(0, 0, 255, 0.3);
+}
+.room {
+  position: relative;
+  background-color: rgba(143, 10, 125, 0.7);
+}
+.chemia{
+  top: 1%;
+  left: -0.1%;
+  width: 5.5%;
+  height: 26.5%;
+}
+.matma{
+  top: -27%;
+  left: 6.1%;
+  width: 12%;
+  height: 26.8%;
+}
+.geo{
+  top: -54%;
+  left: 18.71%;
+  width: 11.74%;
+  height: 27%;
+}
+.bazy{
+  top: -80%;
+  left: 31.3%;
+  width: 11.5%;
+  height: 26%;
+}
+.strony{
+  top: -106%;
+  left: 43.8%;
+  width: 11.75%;
+  height: 27%;
+}
+.bio{
+  top: -133%;
+  left: 56.5%;
+  width: 12%;
+  height: 27%;
+}
+.hist{
+  top: -160%;
+  left: 69%;
+  width: 12%;
+  height: 27%;
+}
+.ang{
+  top: -187%;
+  left: 81.5%;
+  width: 11.5%;
+  height: 27%;
+}
+#sale {
+  top: 39%;
+  left: 25%;
+  width: 25.75%;
+  height: 11%;
+}
+
+#hol {
+  top: 1%;
+  left: 50.75%;
+  width: 10.5%;
+  height: 75.85%;
+}
+#dyr {
+    top: -48.5%;
+    left: 61.25%;
+    width: 7.65%;
+    height: 23%;
+  }
+#schody{
+    top: -48.5%;
+    left: 45.4%;
+    width: 5.4%;
+    height: 6.5%;
+}
+
+#laz_l{
+    top: -45%;
+    left: 40.25%;
+    width: 5%;
+    height: 6.5%;
+}
+#laz_p{
+    top: -38.5%;
+    left: 45.25%;
+    width: 5.5%;
+    height: 10%;
+}

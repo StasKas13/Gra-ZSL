@@ -1,46 +1,104 @@
-const playerElement = document.getElementById("player");
 const joystick = document.getElementById("joystick");
 const joystickHandle = document.getElementById("joystickHandle");
+const blocks = document.querySelectorAll('.block');
+const sale = document.getElementById("sale");
+const hol = document.getElementById("hol");
+const playerElement = document.getElementById("player");
 
-let dragging = false, joystickCenter = { x: 0, y: 0 };
-let player = { x: 625, y: 790, speed: 6, dx: 0, dy: 0 };
+let dragging = false;
+let joystickCenter = { x: 0, y: 0 };
+
 let lastRoom = null;
 let hasAnswered = false; // Zmienna zapobiegająca wielokrotnemu losowaniu pytania
 
-const updateJoystickCenter = () => {
+let player = {
+    x: sale ? sale.offsetLeft : 625,
+    y: sale ? sale.offsetTop : 790,
+    dx: 0,
+    dy: 0,
+    speed: 4
+};
+
+playerElement.style.left = `${player.x}px`;
+playerElement.style.top = `${player.y}px`;
+
+function updateJoystickCenter() {
     const rect = joystick.getBoundingClientRect();
-    joystickCenter = { x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 };
-};
+    joystickCenter = {
+        x: rect.left + rect.width / 2,
+        y: rect.top + rect.height / 2
+    };
+}
+window.addEventListener("resize", updateJoystickCenter);
 
-const handleJoystickMove = (x, y) => {
-    if (!dragging) return;
-    const dx = x - joystickCenter.x, dy = y - joystickCenter.y;
-    const distance = Math.min(Math.sqrt(dx * dx + dy * dy), 75);
-    const angle = Math.atan2(dy, dx);
-    
-    joystickHandle.style.transform = `translate(${Math.cos(angle) * distance}px, ${Math.sin(angle) * distance}px)`;
-    
-    player.dx = Math.cos(angle) * (distance / 75) * player.speed;
-    player.dy = Math.sin(angle) * (distance / 75) * player.speed;
-};
+document.addEventListener("DOMContentLoaded", () => {
+    updateJoystickCenter();
+    gameLoop();
+});
 
-const startDrag = (e) => {
-    dragging = true;
-    const touch = e.touches ? e.touches[0] : e;
-    handleJoystickMove(touch.clientX, touch.clientY);
-};
+function gameLoop() {
+    updatePlayer();
+    requestAnimationFrame(gameLoop);
+}
 
-const moveDrag = (e) => {
-    if (!dragging) return;
-    const touch = e.touches ? e.touches[0] : e;
-    handleJoystickMove(touch.clientX, touch.clientY);
-};
+function updatePlayer() {
+    // Najpierw ruch w osi X
+    const proposedX = player.x + player.dx;
+    const playerRectX = {
+        left: proposedX,
+        top: player.y,
+        right: proposedX + playerElement.offsetWidth,
+        bottom: player.y + playerElement.offsetHeight
+    };
 
-const stopDrag = () => {
-    joystickHandle.style.transform = "translate(-50%, -50%)";
-    player.dx = player.dy = 0;
-    dragging = false;
-};
+    if (isInsideAnyBlock(playerRectX)) {
+        player.x = proposedX;
+        playerElement.style.left = `${player.x}px`;
+    } else {
+        player.dx = 0; // Zatrzymanie ruchu w X
+    }
+
+    // Potem ruch w osi Y
+    const proposedY = player.y + player.dy;
+    const playerRectY = {
+        left: player.x,
+        top: proposedY,
+        right: player.x + playerElement.offsetWidth,
+        bottom: proposedY + playerElement.offsetHeight
+    };
+
+    if (isInsideAnyBlock(playerRectY)) {
+        player.y = proposedY;
+        playerElement.style.top = `${player.y}px`;
+    } else {
+        player.dy = 0; // Zatrzymanie ruchu w Y
+    }
+
+    checkCollision(); // Jeśli masz inne kolizje
+}
+
+
+function isInsideAnyBlock(playerRect) {
+    for (const block of blocks) {
+        const blockRect = {
+            left: block.offsetLeft,
+            top: block.offsetTop,
+            right: block.offsetLeft + block.offsetWidth,
+            bottom: block.offsetTop + block.offsetHeight
+        };
+
+        // Jeśli którykolwiek fragment gracza wchodzi na blok
+        if (
+            playerRect.right > blockRect.left &&
+            playerRect.left < blockRect.right &&
+            playerRect.bottom > blockRect.top &&
+            playerRect.top < blockRect.bottom
+        ) {
+            return true;
+        }
+    }
+    return false;
+}
 
 const checkCollision = () => {
     if (!playerElement || questionBox.style.display === "block") return; // Nie pokazuj nowego pytania, jeśli jedno już trwa
@@ -70,14 +128,14 @@ const checkCollision = () => {
             if (question) {
                 showQuestion(subject, question); // Wyświetl jedno pytanie
             } else {
-                alert(`Brak pytań dla ${subject}`);
+                 alert(`Brak pytań dla ${subject}`);
             }
         }
         
     });
 
     if (!inRoom) {
-        lastRoom = null; // Gracz opuścił pokój, resetujemy lastRoom, żeby mógł odpowiedzieć na nowe pytanie
+         lastRoom = null; // Gracz opuścił pokój, resetujemy lastRoom, żeby mógł odpowiedzieć na nowe pytanie
     }
 };
 
@@ -123,43 +181,54 @@ const checkAnswer = (chosenIndex, correctIndex) => {
         }
     });
 
-    // Po 2 sekundach zamykamy okno pytania
+// Po 2 sekundach zamykamy okno pytania
     setTimeout(() => {
         questionBox.style.display = "none";
     }, 2000);
 };
 
-
-// ** Obsługa joysticka **
-window.addEventListener("resize", updateJoystickCenter);
-
-if (joystick && joystickHandle) {
-    joystick.addEventListener("mousedown", startDrag);
-    joystick.addEventListener("touchstart", startDrag);
-    window.addEventListener("mousemove", moveDrag);
-    window.addEventListener("touchmove", moveDrag);
-    window.addEventListener("mouseup", stopDrag);
-    window.addEventListener("touchend", stopDrag);
+function startDrag(event) {
+    dragging = true;
+    event.preventDefault();
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    updateJoystickCenter();
-    gameLoop();
-});
+function stopDrag(event) {
+    dragging = false;
+    player.dx = 0;
+    player.dy = 0;
+    joystickHandle.style.transform = `translate(0px, 0px)`;
+}
 
-// ** Główna pętla gry **
-const gameLoop = () => {
-    updatePlayer();
-    requestAnimationFrame(gameLoop);
-};
+function moveDrag(event) {
+    if (!dragging) return;
 
-const updatePlayer = () => {
-    player.x = Math.max(0, Math.min(window.innerWidth - 50, player.x + player.dx));
-    player.y = Math.max(0, Math.min(window.innerHeight - 50, player.y + player.dy));
+    const evt = event.touches ? event.touches[0] : event;
+    const dx = evt.clientX - joystickCenter.x;
+    const dy = evt.clientY - joystickCenter.y;
 
-    if (playerElement) {
-        playerElement.style.left = `${player.x}px`;
-        playerElement.style.top = `${player.y}px`;
-        checkCollision();
-    }
-};
+    const distance = Math.min(Math.sqrt(dx * dx + dy * dy), 40);
+    const angle = Math.atan2(dy, dx);
+
+    const handleX = distance * Math.cos(angle);
+    const handleY = distance * Math.sin(angle);
+
+    joystickHandle.style.transform = `translate(${handleX}px, ${handleY}px)`;
+
+    player.dx = Math.cos(angle) * (distance / 40) * player.speed;
+    player.dy = Math.sin(angle) * (distance / 40) * player.speed;
+}
+
+function updateJoystickCenter() {
+    const rect = joystick.getBoundingClientRect();
+    joystickCenter = {
+        x: rect.left + rect.width / 2,
+        y: rect.top + rect.height / 2
+    };
+}
+
+joystick.addEventListener("mousedown", startDrag);
+joystick.addEventListener("touchstart", startDrag);
+window.addEventListener("mousemove", moveDrag);
+window.addEventListener("touchmove", moveDrag);
+window.addEventListener("mouseup", stopDrag);
+window.addEventListener("touchend", stopDrag);
