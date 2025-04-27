@@ -1,6 +1,5 @@
 body {
   /*
-  /*
   margin: 0;
   overflow: hidden;
   background-image: url('Szkoła parter.jpg');
@@ -8,7 +7,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed; 
-  */
   */
   width: 100vw;
   height: 100vh;
@@ -37,14 +35,12 @@ body {
 }
 
 .school-map {
-.school-map {
   position: absolute;
   width: 100%;
   max-width: 1200px;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(9, 60px);
-  top: 0px;
   top: 0px;
 }
 
@@ -55,11 +51,8 @@ body {
 }
 
 #player {
-#player {
   position: absolute;
   width: 30px;
-  height: 30px;
-  background: red;
   height: 30px;
   background: red;
 }
@@ -70,14 +63,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-#questionBox {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%);
-  background: white;
-  padding: 20px;
   background: white;
   padding: 20px;
   border: 2px solid black;
