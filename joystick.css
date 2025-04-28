@@ -52,8 +52,8 @@ body {
 
 #player {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   background: red;
 }
 
@@ -162,10 +162,10 @@ body {
   height: 3.8%;
 }
 #sale {
-  top: 43.6%;
+  top: 43.3%;
   left: 24.5%;
   width: 25.75%;
-  height: 7%;
+  height: 7.2%;
 }
 
 #hol {
