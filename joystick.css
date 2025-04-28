@@ -52,8 +52,8 @@ body {
 
 #player {
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   background: red;
 }
 
@@ -114,88 +114,88 @@ body {
   background-color: rgba(143, 10, 125, 0.7);
 }
 .chemia{
-  top: 1%;
-  left: -0.1%;
-  width: 5.5%;
-  height: 26.5%;
+  top: 31%;
+  left: 24.3%;
+  width: 1%;
+  height: 3.7%;
 }
 .matma{
-  top: -27%;
-  left: 6.1%;
-  width: 12%;
-  height: 26.8%;
+  top: 27.3%;
+  left: 27.6%;
+  width: 1%;
+  height: 3.7%;
 }
 .geo{
-  top: -54%;
-  left: 18.71%;
-  width: 11.74%;
-  height: 27%;
+  top: 23.7%;
+  left: 30.9%;
+  width: 1%;
+  height: 3.7%;
 }
 .bazy{
-  top: -80%;
-  left: 31.3%;
-  width: 11.5%;
-  height: 26%;
+  top: 19.9%;
+  left: 34.1%;
+  width: 1%;
+  height: 3.7%;
 }
 .strony{
-  top: -106%;
-  left: 43.8%;
-  width: 11.75%;
-  height: 27%;
+  top: 16.3%;
+  left: 37.3%;
+  width: 1%;
+  height: 3.7%;
 }
 .bio{
-  top: -133%;
-  left: 56.5%;
-  width: 12%;
-  height: 27%;
+  top: 12.5%;
+  left: 40.5%;
+  width: 1%;
+  height: 3.7%;
 }
 .hist{
-  top: -160%;
-  left: 69%;
-  width: 12%;
-  height: 27%;
+  top: 9%;
+  left: 43.8%;
+  width: 1%;
+  height: 3.7%;
 }
 .ang{
-  top: -187%;
-  left: 81.5%;
-  width: 11.5%;
-  height: 27%;
+  top: 5%;
+  left: 47%;
+  width: 1%;
+  height: 3.8%;
 }
 #sale {
-  top: 39%;
-  left: 25%;
+  top: 43.6%;
+  left: 24.5%;
   width: 25.75%;
-  height: 11%;
+  height: 7%;
 }
 
 #hol {
-  top: 1%;
-  left: 50.75%;
-  width: 10.5%;
-  height: 75.85%;
+  top: -25.2%;
+  left: 50.5%;
+  width: 11%;
+  height: 77.2%;
 }
 #dyr {
-    top: -48.5%;
+    top: -76.5%;
     left: 61.25%;
-    width: 7.65%;
-    height: 23%;
+    width: 8.3%;
+    height: 24.5%;
   }
 #schody{
-    top: -48.5%;
-    left: 45.4%;
-    width: 5.4%;
-    height: 6.5%;
+    top: -77.6%;
+    left: 44.9%;
+    width: 6%;
+    height: 7.7%;
 }
 
 #laz_l{
-    top: -45%;
-    left: 40.25%;
+    top: -77.6%;
+    left: 39.8%;
     width: 5%;
-    height: 6.5%;
+    height: 8.5%;
 }
 #laz_p{
-    top: -38.5%;
-    left: 45.25%;
+    top: -69.3%;
+    left: 44.9%;
     width: 5.5%;
-    height: 10%;
+    height: 12%;
 }
