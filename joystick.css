@@ -52,15 +52,11 @@ body {
 
 #player {
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   background: red;
 }
-.room {
-  width: 55px;
-  height: 60px;
-  background: blue;
-}
+
 
 #questionBox {
   display: none;
@@ -113,41 +109,93 @@ body {
   position: relative;
   background-color: rgba(0, 0, 255, 0.3);
 }
+.room {
+  position: relative;
+  background-color: rgba(143, 10, 125, 0.7);
+}
+.chemia{
+  top: 31%;
+  left: 24.3%;
+  width: 1%;
+  height: 3.7%;
+}
+.matma{
+  top: 27.3%;
+  left: 27.6%;
+  width: 1%;
+  height: 3.7%;
+}
+.geo{
+  top: 23.7%;
+  left: 30.9%;
+  width: 1%;
+  height: 3.7%;
+}
+.bazy{
+  top: 19.9%;
+  left: 34.1%;
+  width: 1%;
+  height: 3.7%;
+}
+.strony{
+  top: 16.3%;
+  left: 37.3%;
+  width: 1%;
+  height: 3.7%;
+}
+.bio{
+  top: 12.5%;
+  left: 40.5%;
+  width: 1%;
+  height: 3.7%;
+}
+.hist{
+  top: 9%;
+  left: 43.8%;
+  width: 1%;
+  height: 3.7%;
+}
+.ang{
+  top: 5%;
+  left: 47%;
+  width: 1%;
+  height: 3.8%;
+}
 #sale {
-  top: 35%;
-  left: 23%;
-  width: 26%;
-  height: 18%;
+  top: 43.6%;
+  left: 24.5%;
+  width: 25.75%;
+  height: 7%;
 }
 
 #hol {
-  top: -9%;
-  left: 49%;
-  width: 14%;
-  height: 83%;
+  top: -25.2%;
+  left: 50.5%;
+  width: 11%;
+  height: 77.2%;
 }
 #dyr {
-    top: -67%;
-    left: 63%;
-    width: 8%;
-    height: 31%;
+    top: -76.5%;
+    left: 61.25%;
+    width: 8.3%;
+    height: 24.5%;
   }
 #schody{
-    top: -74.5%;
-    left: 43.5%;
-    width: 5.5%;
-    height: 14%;
+    top: -77.6%;
+    left: 44.9%;
+    width: 6%;
+    height: 7.7%;
 }
 
 #laz_l{
-    top: -86%;
-    left: 38.3%;
-    width: 5.3%;
-    height: 14%;
+    top: -77.6%;
+    left: 39.8%;
+    width: 5%;
+    height: 8.5%;
 }
 #laz_p{
-    top: -72%;
-    left: 43.5%;
+    top: -69.3%;
+    left: 44.9%;
     width: 5.5%;
-    height: 18%;
+    height: 12%;
 }

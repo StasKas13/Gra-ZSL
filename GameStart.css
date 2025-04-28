@@ -36,6 +36,7 @@ html, body {
   position: relative;
 }
 
+<<<<<<< HEAD
 .hamburger div {
   width: 25px;
   height: 3px;
@@ -74,3 +75,11 @@ html, body {
   transition: max-height 0.4s ease-in;
 }
   
+=======
+#boom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+>>>>>>> 781dbb1cf333de92e7f01b246e3be6c8b64f5f19
