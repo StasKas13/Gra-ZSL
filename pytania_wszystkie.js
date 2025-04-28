@@ -1070,7 +1070,440 @@ let questions = {
       poprawna: 3,
     },
   ],
+  BIZ: [
+    {
+      pytanie: "Co to jest przedsiębiorczość?",
+      odpowiedzi: [
+        "Działanie na rzecz dobra społecznego",
+        "Gotowość do podejmowania ryzyka i realizacji pomysłów",
+        "Planowanie strategii państwa",
+        "Zarządzanie majątkiem prywatnym",
+      ],
+      poprawna: 1,
+    },
+    {
+      pytanie:
+        "Które z poniższych nie jest formą organizacyjną przedsiębiorstwa?",
+      odpowiedzi: [
+        "Spółka akcyjna",
+        "Spółdzielnia",
+        "Fundacja",
+        "Jednoosobowa działalność gospodarcza",
+      ],
+      poprawna: 2,
+    },
+    {
+      pytanie: "Które z poniższych jest przykładem aktywów trwałych?",
+      odpowiedzi: [
+        "Gotówka",
+        "Budynek firmy",
+        "Zapasy magazynowe",
+        "Należności od klientów",
+      ],
+      poprawna: 1,
+    },
+    {
+      pytanie: "Która z poniższych cech nie dotyczy lidera?",
+      odpowiedzi: [
+        "Inspiruje innych",
+        "Motywuje zespół",
+        "Unika odpowiedzialności",
+        "Wyznacza cele",
+      ],
+      poprawna: 2,
+    },
+    {
+      pytanie: 'Co oznacza termin "franczyza"?',
+      odpowiedzi: [
+        "Sprzedaż przedsiębiorstwa",
+        "Współpraca dwóch firm na równych prawach",
+        "Używanie marki i systemu działania za opłatą",
+        "Kupno licencji",
+      ],
+      poprawna: 2,
+    },
+    {
+      pytanie: "Co oznacza pojęcie monopol?",
+      odpowiedzi: [
+        "Rynek wielu sprzedawców",
+        "Jeden dostawca dominujący rynek",
+        "Rynek konsumenta",
+        "Rynek wolnokonkurencyjny",
+      ],
+      poprawna: 1,
+    },
+    {
+      pytanie:
+        "Jak nazywa się dokument potwierdzający sprzedaż towaru lub usługi?",
+      odpowiedzi: [
+        "Wniosek kredytowy",
+        "Faktura",
+        "Umowa leasingowa",
+        "Cennik",
+      ],
+      poprawna: 1,
+    },
+    {
+      pytanie: "Co to jest gospodarka rynkowa?",
+      odpowiedzi: [
+        "Gospodarka planowana przez państwo",
+        "Gospodarka, w której decyzje podejmują konsumenci i przedsiębiorcy",
+        "Gospodarka oparta na systemie cechowym",
+        "Gospodarka wspólnotowa",
+      ],
+      poprawna: 1,
+    },
+    {
+      pytanie: "Czym zajmuje się HR (Human Resources)?",
+      odpowiedzi: [
+        "Produkcją masową",
+        "Zarządzaniem personelem",
+        "Obsługą klientów",
+        "Ochroną środowiska",
+      ],
+      poprawna: 1,
+    },
+    {
+      pytanie: "Co to jest kredyt inwestycyjny?",
+      odpowiedzi: [
+        "Pożyczka na bieżące wydatki firmy",
+        "Finansowanie zakupu środków trwałych",
+        "Kredyt hipoteczny",
+        "Kredyt konsumpcyjny",
+      ],
+      poprawna: 1,
+    },
+  ],
+  HIT: [
+    {
+      pytanie: "Kiedy wybuchła I wojna światowa?",
+      odpowiedzi: ["1912", "1914", "1918", "1920"],
+      poprawna: 1,
+    },
+    {
+      pytanie: "Kto był przywódcą powstania listopadowego?",
+      odpowiedzi: [
+        "Józef Piłsudski",
+        "Tadeusz Kościuszko",
+        "Adam Czartoryski",
+        "Józef Chłopicki",
+      ],
+      poprawna: 3,
+    },
+    {
+      pytanie: "W którym roku Polska odzyskała niepodległość?",
+      odpowiedzi: ["1795", "1830", "1918", "1945"],
+      poprawna: 2,
+    },
+    {
+      pytanie: 'Co oznacza termin "zimna wojna"?',
+      odpowiedzi: [
+        "Wojna nuklearna",
+        "Bezpośredni konflikt zbrojny",
+        "Stan napięcia politycznego między Wschodem a Zachodem bez bezpośrednich działań wojennych",
+        "Wojna na Antarktydzie",
+      ],
+      poprawna: 2,
+    },
+    {
+      pytanie: "Kto był pierwszym królem Polski?",
+      odpowiedzi: [
+        "Kazimierz Wielki",
+        "Bolesław Chrobry",
+        "Mieszko I",
+        "Władysław Łokietek",
+      ],
+      poprawna: 1,
+    },
+    {
+      pytanie: "W którym roku rozpoczęła się II wojna światowa?",
+      odpowiedzi: ["1914", "1918", "1939", "1945"],
+      poprawna: 2,
+    },
+    {
+      pytanie: 'Co oznacza termin "żelazna kurtyna"?',
+      odpowiedzi: [
+        "Bariera ekonomiczna między Europą a Ameryką",
+        "Podział Europy na wschodnią i zachodnią część w okresie zimnej wojny",
+        "Linia frontu II wojny światowej",
+        "Nazwa planu odbudowy Europy",
+      ],
+      poprawna: 1,
+    },
+    {
+      pytanie: "Co oznacza Plan Marshalla?",
+      odpowiedzi: [
+        "Plan budowy broni atomowej",
+        "Plan podboju Niemiec",
+        "Plan pomocy gospodarczej dla Europy po II wojnie światowej",
+        "Plan budowy NATO",
+      ],
+      poprawna: 2,
+    },
+    {
+      pytanie: 'Co to była Operacja "Burza"?',
+      odpowiedzi: [
+        "Plan ofensywy wojsk alianckich",
+        "Akcja Armii Krajowej podczas II wojny światowej",
+        "Inwazja USA na Irak",
+        "Bitwa o Normandię",
+      ],
+      poprawna: 1,
+    },
+    {
+      pytanie: "Kiedy Polska wstąpiła do NATO?",
+      odpowiedzi: ["1999", "2001", "2003", "2004"],
+      poprawna: 0,
+    },
+  ],
+  Niemiecki: [
+    {
+      pytanie: "Co oznacza niemieckie słowo „Freund”?",
+      odpowiedzi: ["Wróg", "Przyjaciel", "Dziecko", "Praca"],
+      poprawna: 1,
+    },
+    {
+      pytanie: "Jak zapytasz „Jak się masz?” po niemiecku?",
+      odpowiedzi: [
+        "Wo wohnst du?",
+        "Wie geht es dir?",
+        "Was machst du?",
+        "Wer bist du?",
+      ],
+      poprawna: 1,
+    },
+    {
+      pytanie: "Które z poniższych jest nazwą miesiąca?",
+      odpowiedzi: ["Woche", "Tag", "Januar", "Stunde"],
+      poprawna: 2,
+    },
+    {
+      pytanie: 'Który zaimek osobowy odpowiada "ja"?',
+      odpowiedzi: ["du", "wir", "ich", "sie"],
+      poprawna: 2,
+    },
+    {
+      pytanie: 'Jak powiedzieć "dzień dobry" przed południem?',
+      odpowiedzi: ["Guten Abend", "Gute Nacht", "Guten Morgen", "Hallo"],
+      poprawna: 2,
+    },
+    {
+      pytanie: 'Jak zapytać "Gdzie mieszkasz?" po niemiecku?',
+      odpowiedzi: [
+        "Wo wohnst du?",
+        "Woher kommst du?",
+        "Was machst du?",
+        "Wer bist du?",
+      ],
+      poprawna: 0,
+    },
+    {
+      pytanie: 'Jak powiedzieć "mam psa" po niemiecku?',
+      odpowiedzi: [
+        "Ich habe einen Hund",
+        "Ich bin ein Hund",
+        "Ich sehe einen Hund",
+        "Ich spiele Hund",
+      ],
+      poprawna: 0,
+    },
+    {
+      pytanie: 'Jak jest "po lewej stronie" po niemiecku?',
+      odpowiedzi: ["nach rechts", "nach links", "geradeaus", "zurück"],
+      poprawna: 1,
+    },
+    {
+      pytanie: 'Jak zapytasz "Ile masz lat?"?',
+      odpowiedzi: [
+        "Wie alt bist du?",
+        "Wo wohnst du?",
+        "Was machst du?",
+        "Wer bist du?",
+      ],
+      poprawna: 0,
+    },
+    {
+      pytanie: 'Co oznacza "arbeiten"?',
+      odpowiedzi: ["Bawić się", "Uczyć się", "Pracować", "Śpiewać"],
+      poprawna: 2,
+    },
+  ],
+  PAI: [
+    {
+      pytanie: "Jakim językiem tworzy się strukturę strony internetowej?",
+      odpowiedzi: ["CSS", "HTML", "JavaScript", "PHP"],
+      poprawna: 1,
+    },
+    {
+      pytanie: "Co oznacza skrót HTTP?",
+      odpowiedzi: [
+        "Hyper Transfer Text Protocol",
+        "Hyper Text Transfer Protocol",
+        "High Transfer Text Protocol",
+        "High Text Transmission Protocol",
+      ],
+      poprawna: 1,
+    },
+    {
+      pytanie: "Który znacznik HTML używa się do wstawienia obrazu?",
+      odpowiedzi: ["<picture>", "<img>", "<image>", "<src>"],
+      poprawna: 1,
+    },
+    {
+      pytanie: "Jak zapisać komentarz w HTML?",
+      odpowiedzi: [
+        "// komentarz",
+        "* komentarz *",
+        "<!-- komentarz -->",
+        "** komentarz **",
+      ],
+      poprawna: 2,
+    },
+    {
+      pytanie: "Jaką właściwością CSS zmieniamy kolor tekstu?",
+      odpowiedzi: ["font-color", "color", "background-color", "text-style"],
+      poprawna: 1,
+    },
+    {
+      pytanie: "Co robi polecenie console.log() w JavaScript?",
+      odpowiedzi: [
+        "Zapisuje dane do pliku",
+        "Wyświetla dane w konsoli",
+        "Wysyła dane do serwera",
+        "Wczytuje plik HTML",
+      ],
+      poprawna: 1,
+    },
+    {
+      pytanie: "Jakim znacznikiem w HTML tworzy się link?",
+      odpowiedzi: ["<link>", "<a>", "<href>", "<nav>"],
+      poprawna: 1,
+    },
+    {
+      pytanie: "Co oznacza <ul> w HTML?",
+      odpowiedzi: [
+        "Lista uporządkowana",
+        "Lista nieuporządkowana",
+        "Podkreślenie",
+        "Odnośnik",
+      ],
+      poprawna: 1,
+    },
+    {
+      pytanie: "Jaką metodę HTTP używamy do wysłania danych na serwer?",
+      odpowiedzi: ["GET", "POST", "PUT", "FETCH"],
+      poprawna: 1,
+    },
+    {
+      pytanie: "Jakim poleceniem w JavaScript dodasz nowy element do HTML?",
+      odpowiedzi: [
+        "document.add()",
+        "document.createElement()",
+        "element.append()",
+        "html.create()",
+      ],
+      poprawna: 1,
+    },
+  ],
+  ZPI: [
+    {
+      pytanie: "Co to jest projekt?",
+      odpowiedzi: [
+        "Stała praca w firmie",
+        "Tymczasowe przedsięwzięcie o określonym celu",
+        "Działalność marketingowa",
+        "Działalność produkcyjna",
+      ],
+      poprawna: 1,
+    },
+    {
+      pytanie: "Co to jest zakres projektu?",
+      odpowiedzi: [
+        "Lista ryzyk",
+        "Zakres obowiązków kierownika",
+        "Granice działań projektowych",
+        "Kosztorys",
+      ],
+      poprawna: 2,
+    },
+    {
+      pytanie: "Czym zajmuje się analiza ryzyka?",
+      odpowiedzi: [
+        "Identyfikowaniem szans rynkowych",
+        "Poszukiwaniem inwestorów",
+        "Identyfikowaniem zagrożeń w projekcie",
+        "Tworzeniem aplikacji",
+      ],
+      poprawna: 2,
+    },
+    {
+      pytanie: "Które z poniższych nie jest fazą cyklu życia projektu?",
+      odpowiedzi: ["Inicjacja", "Planowanie", "Sprzedaż", "Realizacja"],
+      poprawna: 2,
+    },
+    {
+      pytanie: "Co to jest kamień milowy w projekcie?",
+      odpowiedzi: [
+        "Zakończenie etapu projektu",
+        "Opóźnienie w harmonogramie",
+        "Zatrudnienie nowego pracownika",
+        "Płatność za wykonane prace",
+      ],
+      poprawna: 0,
+    },
+    {
+      pytanie: "Co oznacza skrót SCRUM?",
+      odpowiedzi: [
+        "Metoda zarządzania tradycyjnym projektem",
+        "Metoda zwinnego zarządzania projektami",
+        "Typ dokumentacji",
+        "System kontroli dostępu",
+      ],
+      poprawna: 1,
+    },
+    {
+      pytanie: "Czym jest backlog w zarządzaniu projektami?",
+      odpowiedzi: [
+        "Lista zakończonych zadań",
+        "Lista funkcjonalności do wykonania",
+        "Dokument finansowy",
+        "Harmonogram płatności",
+      ],
+      poprawna: 1,
+    },
+    {
+      pytanie: "Czym jest sprint w metodyce SCRUM?",
+      odpowiedzi: [
+        "Długi etap projektu",
+        "Krótki okres realizacji zadań",
+        "Lista ryzyk",
+        "Wdrożenie końcowe",
+      ],
+      poprawna: 1,
+    },
+    {
+      pytanie: 'Jakie są trzy ograniczenia projektu ("trójkąt projektowy")?',
+      odpowiedzi: [
+        "Koszt, czas, zakres",
+        "Klient, inwestor, użytkownik",
+        "Testowanie, wdrażanie, szkolenie",
+        "Kasa, budżet, zapas",
+      ],
+      poprawna: 0,
+    },
+    {
+      pytanie: "Co to jest analiza interesariuszy?",
+      odpowiedzi: [
+        "Wyszukiwanie ryzyk finansowych",
+        "Określenie wpływu osób zainteresowanych projektem",
+        "Analiza kosztów",
+        "Kontrola jakości",
+      ],
+      poprawna: 1,
+    },
+  ],
 };
+
 window.questions = questions; // Udostępniamy globalnie
 
 console.log("✅ pytania_kl1.js załadowane!");
