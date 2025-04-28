@@ -461,7 +461,295 @@ let questions = {
       "odpowiedzi": ["Cząsteczki, atomy, komórki, organizmy, ekosystemy", "Białka, komórki, organizmy, biomy, ekosystemy", "Atomy, molekuły, komórki, tkanki, organizmy", "Komórki, tkanki, organy, układy, organizmy"],
       "poprawna": 3
     }
-  ]  
+  ],
+  "Fizyka": [
+    {
+      "pytanie": "Jednostką siły w układzie SI jest:",
+      "odpowiedzi": ["kilogram", "niuton", "dżul", "metr"],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Jednostką pracy w układzie SI jest:",
+      "odpowiedzi": ["niuton", "dżul", "wat", "metr na sekundę"],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Ruch jednostajnie przyspieszony ma:",
+      "odpowiedzi": ["stałą siłę", "zmienną drogę", "stałe przyspieszenie", "stałą prędkość"],
+      "poprawna": 2
+    },
+    {
+      "pytanie": "Energia kinetyczna ciała to energia związana z jego:",
+      "odpowiedzi": ["położeniem", "ciężarem", "ruchem", "temperaturą"],
+      "poprawna": 2
+    },
+    {
+      "pytanie": "Ciepło właściwe to:",
+      "odpowiedzi": [
+        "całkowita ilość ciepła ciała",
+        "ilość ciepła potrzebna do ogrzania 1 kg substancji o 1°C",
+        "energia mechaniczna ciała",
+        "ilość ciepła oddana podczas ochładzania"
+      ],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Przyspieszenie ziemskie przyjmujemy w przybliżeniu jako:",
+      "odpowiedzi": ["5 m/s²", "8,9 m/s²", "9,81 m/s²", "10,5 m/s²"],
+      "poprawna": 2
+    },
+    {
+      "pytanie": "Prędkość światła w próżni wynosi około:",
+      "odpowiedzi": ["150 000 km/s", "200 000 km/s", "300 000 km/s", "400 000 km/s"],
+      "poprawna": 2
+    },
+    {
+      "pytanie": "Jednostką mocy w układzie SI jest:",
+      "odpowiedzi": ["wat", "dżul", "niuton", "kelwin"],
+      "poprawna": 0
+    },
+    {
+      "pytanie": "Ciśnienie to stosunek:",
+      "odpowiedzi": ["siły do masy", "siły do powierzchni", "masy do objętości", "objętości do siły"],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Jednostką natężenia prądu elektrycznego jest:",
+      "odpowiedzi": ["wolt", "om", "dżul", "amper"],
+      "poprawna": 3
+    }
+  ],
+  "Hiszpański": [
+    {
+      "pytanie": "„Mi hermano es más alto que yo” oznacza:",
+      "odpowiedzi": [
+        "Mój brat jest niższy ode mnie.",
+        "Mój brat jest wyższy ode mnie.",
+        "Mój brat jest taki sam jak ja.",
+        "Mój brat jest młodszy ode mnie."
+      ],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Które z podanych zdań używa poprawnie czasownika „gustar”?",
+      "odpowiedzi": [
+        "Yo gusto la música.",
+        "Me gusta la música.",
+        "Gustas la música.",
+        "Me gusto la música."
+      ],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "„El coche de mi padre” oznacza:",
+      "odpowiedzi": [
+        "Samochód mojego brata",
+        "Samochód mojego ojca",
+        "Samochód mojego kolegi",
+        "Samochód mojego dziadka"
+      ],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Słowo „izquierda” oznacza:",
+      "odpowiedzi": ["prawo", "naprzód", "lewo", "prosto"],
+      "poprawna": 2
+    },
+    {
+      "pytanie": "Które z podanych wyrażeń oznacza „przed południem”?",
+      "odpowiedzi": ["por la noche", "por la tarde", "por la mañana", "a medianoche"],
+      "poprawna": 2
+    },
+    {
+      "pytanie": "Zaimki „me, te, se, nos, os” są przykładami:",
+      "odpowiedzi": [
+        "zaimków dzierżawczych",
+        "zaimków zwrotnych",
+        "zaimków wskazujących",
+        "zaimków pytających"
+      ],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "„La playa” to:",
+      "odpowiedzi": ["rzeka", "plaża", "góra", "jezioro"],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "„Comer” to:",
+      "odpowiedzi": ["pić", "jeść", "czytać", "pisać"],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "„¿Cómo te llamas?” oznacza:",
+      "odpowiedzi": [
+        "Skąd jesteś?",
+        "Ile masz lat?",
+        "Jak masz na imię?",
+        "Gdzie mieszkasz?"
+      ],
+      "poprawna": 2
+    },
+    {
+      "pytanie": "„Perro” po hiszpańsku to:",
+      "odpowiedzi": ["kot", "pies", "ptak", "koń"],
+      "poprawna": 1
+    }
+  ],
+  "Informatyka": [
+    {
+      "pytanie": "Najmniejszą jednostką informacji w informatyce jest:",
+      "odpowiedzi": ["bajt", "bit", "kilobajt", "megabajt"],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Co to jest sieć LAN?",
+      "odpowiedzi": [
+        "lokalna sieć komputerowa",
+        "internet ogólnokrajowy",
+        "międzynarodowa sieć komputerowa",
+        "połączenie Bluetooth"
+      ],
+      "poprawna": 0
+    },
+    {
+      "pytanie": "Co oznacza skrót HDD?",
+      "odpowiedzi": [
+        "Home Device Driver",
+        "Hard Disk Drive",
+        "Heavy Data Device",
+        "High Display Device"
+      ],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Program Microsoft Word służy do:",
+      "odpowiedzi": [
+        "edycji tekstu",
+        "tworzenia grafiki",
+        "nagrywania dźwięku",
+        "zarządzania siecią"
+      ],
+      "poprawna": 0
+    },
+    {
+      "pytanie": "Jaką funkcję pełni karta graficzna?",
+      "odpowiedzi": [
+        "przechowuje dane",
+        "przetwarza dźwięk",
+        "generuje obraz",
+        "steruje zasilaniem"
+      ],
+      "poprawna": 2
+    },
+    {
+      "pytanie": "Pamięć RAM służy do:",
+      "odpowiedzi": [
+        "tymczasowego przechowywania danych podczas pracy",
+        "przechowywania danych na zawsze",
+        "wyświetlania obrazu",
+        "zasilania komputera"
+      ],
+      "poprawna": 0
+    },
+    {
+      "pytanie": "Która część komputera odpowiada za przechowywanie danych na stałe?",
+      "odpowiedzi": ["RAM", "dysk twardy", "karta graficzna", "procesor"],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Która funkcja w Pythonie służy do wyświetlania danych?",
+      "odpowiedzi": ["input()", "print()", "output()", "write()"],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Która sieć jest największa pod względem zasięgu?",
+      "odpowiedzi": ["LAN", "MAN", "WAN", "PAN"],
+      "poprawna": 2
+    },
+    {
+      "pytanie": "Procesor (CPU) odpowiada za:",
+      "odpowiedzi": [
+        "wyświetlanie obrazu",
+        "wykonywanie instrukcji programu",
+        "przechowywanie danych",
+        "przesyłanie sygnału sieciowego"
+      ],
+      "poprawna": 1
+    }
+  ],
+  "Obiektowe": [
+    {
+      "pytanie": "Jaki typ zmiennej w C++ służy do przechowywania liczby całkowitej?",
+      "odpowiedzi": ["float", "double", "int", "char"],
+      "poprawna": 2
+    },
+    {
+      "pytanie": "Co robi pętla w programie?",
+      "odpowiedzi": [
+        "Wykonuje instrukcje jeden raz",
+        "Powtarza instrukcje wielokrotnie",
+        "Zatrzymuje program",
+        "Otwiera nowy plik"
+      ],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Jednostką pojemności pamięci jest:",
+      "odpowiedzi": ["wat", "amper", "bajt", "piksel"],
+      "poprawna": 2
+    },
+    {
+      "pytanie": "Jaki znak służy do zakończenia instrukcji w C++?",
+      "odpowiedzi": [". (kropka)", ": (dwukropek)", ", (przecinek)", "; (średnik)"],
+      "poprawna": 3
+    },
+    {
+      "pytanie": "Co wypisze instrukcja cout << \"Hello\";",
+      "odpowiedzi": ["Nic", "Hello", "cout", "Hello cout"],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Które z poniższych jest poprawnym operatorem przypisania?",
+      "odpowiedzi": ["==", "=", ":=", "=>"],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Typ double w C++ służy do przechowywania:",
+      "odpowiedzi": [
+        "tekstu",
+        "liczb zmiennoprzecinkowych",
+        "liczb całkowitych",
+        "znaków"
+      ],
+      "poprawna": 1
+    },
+    {
+      "pytanie": "Jak w C++ nazywa się funkcja tworząca obiekt?",
+      "odpowiedzi": [
+        "operator",
+        "funkcja główna",
+        "konstruktor",
+        "destruktor"
+      ],
+      "poprawna": 2
+    },
+    {
+      "pytanie": "Wskaż poprawne wywołanie metody drukuj() obiektu mojObiekt:",
+      "odpowiedzi": [
+        "mojObiekt.drukuj();",
+        "drukuj.mojObiekt();",
+        "drukuj();",
+        "mojObiekt::drukuj();"
+      ],
+      "poprawna": 0
+    },
+    {
+      "pytanie": "Który z tych atrybutów nie istnieje w C++?",
+      "odpowiedzi": ["public", "private", "protected", "hidden"],
+      "poprawna": 3
+    }
+  ]
 };
 window.questions = questions; // Udostępniamy globalnie
 
