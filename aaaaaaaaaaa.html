@@ -7,8 +7,30 @@
   <link rel="stylesheet" href="joystick.css">
   <link rel="stylesheet" href="planszkoly.css">
   <link rel="stylesheet" href="pyt.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="GameStart.css">
 </head>
 <body>
+<!-- menu gry -->
+<div class="hamburger" onclick="toggleMenu()">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+<nav class="menu" id="menu">
+  <a href="GameStart.html">STRONA STARTOWA</a>
+  <a href="#">WYBÓR GRACZA</a>
+  <a href="informacje.html">INFORMACJE O GRZE</a>
+</nav>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById('menu');
+  menu.classList.toggle('active');
+}
+</script>
+
   <div id="main_div" class="map-container" style="display: flex; justify-content: center;align-items: center; background-color: white;">
     <div id="bg" style="background-image: url('Szkoła parter.jpg'); background-repeat: no-repeat; background-size: cover;">
     <div class="block" id="sale">
