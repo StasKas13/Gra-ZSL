@@ -1,16 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="GameStart.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="GameStart.css">
 </head>
 <body>
     <div class="all">
-    <a href="aaaaaaaaaaa.html">
-        <button type="button">START</button>
-    </a>
+        <a href="aaaaaaaaaaa.html">
+            <button type="button">START</button>
+        </a>
+
+<div class="hamburger" onclick="toggleMenu()">
+  <div></div>
+  <div></div>
+  <div></div>
 </div>
+
+<nav class="menu" id="menu">
+  <a href="GameStart.html">STRONA STARTOWA</a>
+  <a href="#">WYBÓR GRACZA</a>
+  <a href="informacje.html">INFORMACJE O GRZE</a>
+</nav>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById('menu');
+  menu.classList.toggle('active');
+}
+</script>
+
 </body>
 </html>

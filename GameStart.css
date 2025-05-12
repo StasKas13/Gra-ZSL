@@ -2,6 +2,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
 }
 
 .all {
@@ -12,20 +13,63 @@ html, body {
     background-position: center;   
     background-repeat: no-repeat;  
 }
-
 .all button{
-    top: 73%;
-    left: 45%;
-    height:120px;
-    width:250px;
-    border-radius: 5%;
-    background-color:aliceblue;
-    position: absolute;
+  top: 73%;
+  left: 45%;
+  height: 120px;
+  width: 250px;
+  border-radius: 5%;
+  background-color: aliceblue;
+  position: absolute;
+}
+#boom{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.hamburger {
+  display: inline-block;
+  cursor: pointer;
+  padding: 15px;
+  z-index: 2; 
+  position: relative;
 }
 
-#boom {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px 0;
+  transition: 0.4s;
 }
+
+/* menu */
+.menu {
+  overflow: hidden;
+  max-height: 0;
+  flex-direction: column;
+  background-color: #eee;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  transition: max-height 0.4s ease-out;
+}
+
+.menu a {
+  padding: 15px;
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid #ccc;
+}
+
+.menu a:hover {
+  background-color: #ddd;
+}
+
+.menu.active {
+  max-height: 300px; 
+  transition: max-height 0.4s ease-in;
+}
+  

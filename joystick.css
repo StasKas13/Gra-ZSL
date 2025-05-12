@@ -34,22 +34,6 @@ body {
   transform: translate(-50%, -50%);
 }
 
-/*.player {
-  width: 50px;
-  height: 50px;
-  background-color: blue;
-  position: absolute; 
-  top: 790px;
-  left: 625px;
-
-  .room {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  background-color: rgba(255, 0, 0, 0.5);
-  border: 2px solid red;
-}
-}*/
 .school-map {
   position: absolute;
   width: 100%;
@@ -68,15 +52,11 @@ body {
 
 #player {
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 18px;
+  height: 18px;
   background: red;
 }
-.room {
-  width: 55px;
-  height: 60px;
-  background: blue;
-}
+
 
 #questionBox {
   display: none;
@@ -99,4 +79,123 @@ body {
 
 .answer-button:hover {
   background-color: lightgray;
+}
+/* -------------------------------------------------- */
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+.map-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Mapa jako tło przesunięte na dół */
+.map-container img.map-image {
+  position: relative;
+  top: 0; /* lub top: 50px; jak chcesz niżej */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* to sprawia, że jest pod spodem */
+}
+.block {
+  position: relative;
+  background-color: rgba(0, 0, 255, 0.3);
+}
+.room {
+  position: relative;
+  background-color: rgba(143, 10, 125, 0.7);
+}
+.chemia{
+  top: 31%;
+  left: 24.3%;
+  width: 1%;
+  height: 3.7%;
+}
+.matma{
+  top: 27.3%;
+  left: 27.6%;
+  width: 1%;
+  height: 3.7%;
+}
+.geo{
+  top: 23.7%;
+  left: 30.9%;
+  width: 1%;
+  height: 3.7%;
+}
+.bazy{
+  top: 19.9%;
+  left: 34.1%;
+  width: 1%;
+  height: 3.7%;
+}
+.strony{
+  top: 16.3%;
+  left: 37.3%;
+  width: 1%;
+  height: 3.7%;
+}
+.bio{
+  top: 12.5%;
+  left: 40.5%;
+  width: 1%;
+  height: 3.7%;
+}
+.hist{
+  top: 9%;
+  left: 43.8%;
+  width: 1%;
+  height: 3.7%;
+}
+.ang{
+  top: 5%;
+  left: 47%;
+  width: 1%;
+  height: 3.8%;
+}
+#sale {
+  top: 43.3%;
+  left: 24.5%;
+  width: 25.75%;
+  height: 7.2%;
+}
+
+#hol {
+  top: -25.2%;
+  left: 50.5%;
+  width: 11%;
+  height: 77.2%;
+}
+#dyr {
+    top: -76.5%;
+    left: 61.25%;
+    width: 8.3%;
+    height: 24.5%;
+  }
+#schody{
+    top: -77.6%;
+    left: 44.9%;
+    width: 6%;
+    height: 7.7%;
+}
+
+#laz_l{
+    top: -77.6%;
+    left: 39.8%;
+    width: 5%;
+    height: 8.5%;
+}
+#laz_p{
+    top: -69.3%;
+    left: 44.9%;
+    width: 5.5%;
+    height: 12%;
 }
