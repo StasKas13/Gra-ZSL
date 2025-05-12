@@ -199,3 +199,15 @@ body {
     width: 5.5%;
     height: 12%;
 }
+#scoreBox {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: #222;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 12px;
+    font-size: 18px;
+    z-index: 9999;
+    font-family: sans-serif;
+}

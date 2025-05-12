@@ -162,24 +162,32 @@ const showQuestion = (subject, question) => {
 };
 
 // Funkcja sprawdzająca poprawność odpowiedzi
+let punkty = 0;
+const scoreBox = document.getElementById("scoreBox");
 const checkAnswer = (chosenIndex, correctIndex) => {
     if (hasAnswered) return; // Zapobiegamy wielokrotnemu odpowiadaniu
-
     hasAnswered = true; // Oznaczamy, że odpowiedzieliśmy
 
     const buttons = answersContainer.querySelectorAll(".answer-button");
 
     buttons.forEach((btn, index) => {
-        btn.disabled = true; // Blokujemy przyciski po odpowiedzi
+        btn.disabled = true;
         if (index === correctIndex) {
-            btn.style.backgroundColor = "green"; // Poprawna odpowiedź -> zielony
+            btn.style.backgroundColor = "green";
             btn.style.color = "white";
         }
         if (index === chosenIndex && index !== correctIndex) {
-            btn.style.backgroundColor = "red"; // Zła odpowiedź -> czerwony
+            btn.style.backgroundColor = "red";
             btn.style.color = "white";
         }
     });
+
+    if (chosenIndex === correctIndex) {
+        punkty++;
+        scoreBox.textContent = `Punkty: ${punkty}`;
+    }
+    console.log("punkty:")
+    console.log(punkty);
 
 // Po 2 sekundach zamykamy okno pytania
     setTimeout(() => {
