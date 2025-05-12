@@ -1,18 +1,13 @@
-body {
-  /*
+html, body {
   margin: 0;
+  padding: 0;
   overflow: hidden;
-  background-image: url('Szkoła parter.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; 
-  */
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
+  width: 100%;
+  height: 100%;
 }
-
+* {
+  box-sizing: border-box;
+}
 .joystick {
   position: fixed;
   bottom: 50px;
@@ -81,12 +76,7 @@ body {
   background-color: lightgray;
 }
 /* -------------------------------------------------- */
-body {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: black;
-}
+
 
 .map-container {
   position: relative;
@@ -199,3 +189,34 @@ body {
     width: 5.5%;
     height: 12%;
 }
+#scoreBox {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: #222;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 12px;
+  font-size: 18px;
+  z-index: 9999;
+  font-family: sans-serif;
+}
+/* Hamburger button */
+.hamburger {
+  position: fixed;
+  top: -100%;
+  left: 1%;
+  width: 35px;
+  height: 25px;
+  z-index: 9999;
+}
+
+
+
+
+
+
+
+
+
+

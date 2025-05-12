@@ -11,28 +11,14 @@
   <link rel="stylesheet" href="GameStart.css">
 </head>
 <body>
-<!-- menu gry -->
-<div class="hamburger" onclick="toggleMenu()">
-  <div></div>
-  <div></div>
-  <div></div>
-</div>
 
-<nav class="menu" id="menu">
-  <a href="GameStart.html">STRONA STARTOWA</a>
-  <a href="#">WYBÓR GRACZA</a>
-  <a href="informacje.html">INFORMACJE O GRZE</a>
-</nav>
 
-<script>
-function toggleMenu() {
-  const menu = document.getElementById('menu');
-  menu.classList.toggle('active');
-}
-</script>
+
 
   <div id="main_div" class="map-container" style="display: flex; justify-content: center;align-items: center; background-color: white;">
+      
     <div id="bg" style="background-image: url('Szkoła parter.jpg'); background-repeat: no-repeat; background-size: cover;">
+      
     <div class="block" id="sale">
       
     <!--<div id="polski" class="room pol" data-subject="Język polski"></div>-->
@@ -50,20 +36,34 @@ function toggleMenu() {
     <div class="block" id="schody"></div>
     <div class="block" id="laz_p"></div>
     <div class="block" id="laz_l"></div>
-    
+    <div id="scoreBox">Punkty: 0</div>
     
   </div>
     
 
   </div>
   
+<!-- MENU FIXED -->
+<div class="hamburger" onclick="toggleMenu()">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
 
+<nav class="menu" id="menu">
+  <a href="GameStart.html">STRONA STARTOWA</a>
+  <a href="#">WYBÓR GRACZA</a>
+  <a href="informacje.html">INFORMACJE O GRZE</a>
+</nav>
+
+
+<div id="player" class="player"></div>
   
 <div class="school-map">
   
   
   <!-- Ludzik sterowany joystickiem -->
-  <div id="player" class="player"></div>
+  
   <div class="joystick" id="joystick">
     <div class="joystick-handle" id="joystickHandle"></div>
   </div>
@@ -98,16 +98,12 @@ function toggleMenu() {
   window.addEventListener('load', reiszemybg);
 </script>
 <script>
-  function reiszemybg() {
-    md = document.getElementById('main_div');
-    bg = document.getElementById('bg');
-
-    bg.style.width = md.offsetWidth + "px";
-    bg.style.height = (((md.offsetWidth)/ 1980) * 1080) + "px";
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('active');
+    console.log("Menu toggled:", menu.classList.contains("active"));
   }
-  window.addEventListener("resize", reiszemybg);
-  window.addEventListener('load', reiszemybg);
-</script>
+  </script>
 
   
 </body>
