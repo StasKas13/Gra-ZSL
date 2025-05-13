@@ -188,7 +188,6 @@ const checkAnswer = (chosenIndex, correctIndex) => {
     }
     console.log("punkty:")
     console.log(punkty);
-
 // Po 2 sekundach zamykamy okno pytania
     setTimeout(() => {
         questionBox.style.display = "none";

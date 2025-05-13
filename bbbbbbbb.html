@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gra ZSL</title>
+  <link rel="stylesheet" href="joystick.css">
+  <link rel="stylesheet" href="planszkoly.css">
+  <link rel="stylesheet" href="pyt.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="GameStart.css">
+</head>
+<body>
+
+
+
+
+  <div id="main_div" class="map-container" style="display: flex; justify-content: center;align-items: center; background-color: white;">
+      
+    <div id="bg" style="background-image: url('Szkoła parter.jpg'); background-repeat: no-repeat; background-size: cover;">
+      
+    <div class="block" id="sale">
+      
+    <!---->
+    </div>
+    <div id="polski" class="room pol" data-subject="Język polski"></div>
+      <div id="fizyka" class="block room fizyka" data-subject="Fizyka"></div>
+      <div id="hiszpanski" class="block room hiszpanski" data-subject="Hiszpański"></div>
+      <div id="inf" class="block room inf" data-subject="Informatyka"></div>
+      <div id="obiektowe" class="block room obiektowe" data-subject="Obiektowe"></div>
+      <div id="hit" class="block room hit" data-subject="HIT"></div>
+      <div id="niemiecki" class="block room niemiecki" data-subject="Niemiecki"></div>
+      <div id="pai" class="block room pai" data-subject="PAI"></div>
+    <div class="block" id="hol"></div>
+    <div class="block" id="dyr"></div>
+    <div class="block" id="schody"></div>
+    <div class="block" id="laz_p"></div>
+    <div class="block" id="laz_l"></div>
+    <div id="scoreBox">Punkty: 0</div>
+    
+  </div>
+    
+
+  </div>
+  
+<!-- MENU FIXED -->
+<div class="hamburger" onclick="toggleMenu()">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+<nav class="menu" id="menu">
+  <a href="GameStart.html">STRONA STARTOWA</a>
+  <a href="#">WYBÓR GRACZA</a>
+  <a href="informacje.html">INFORMACJE O GRZE</a>
+</nav>
+
+
+<div id="player" class="player"></div>
+  
+<div class="school-map">
+  
+  
+  <!-- Ludzik sterowany joystickiem -->
+  
+  <div class="joystick" id="joystick">
+    <div class="joystick-handle" id="joystickHandle"></div>
+  </div>
+
+  
+  
+</div>
+
+<div id="questionBox" class="hidden">
+  <p id="questionText"></p>
+  <div id="answers"></div>
+</div>
+
+</div>
+
+<div id="questionData" style="display: none;"></div>
+<script src="pytania_wszystkie.js"></script>
+
+
+<script src="pyt.js"></script>
+
+<script src="movement.js"></script>
+<script>
+  function reiszemybg() {
+    md = document.getElementById('main_div');
+    bg = document.getElementById('bg');
+
+    bg.style.width = md.offsetWidth + "px";
+    bg.style.height = (((md.offsetWidth)/ 1980) * 1080) + "px";
+  }
+  window.addEventListener("resize", reiszemybg);
+  window.addEventListener('load', reiszemybg);
+</script>
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('active');
+    console.log("Menu toggled:", menu.classList.contains("active"));
+  }
+  </script>
+
+  
+</body>
+</html>
