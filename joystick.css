@@ -97,11 +97,11 @@ html, body {
 }
 .block {
   position: relative;
-  background-color: rgba(0, 0, 255, 0.3);
+  /* background-color: rgba(0, 0, 255, 0.3); */
 }
 .room {
   position: relative;
-  background-color: rgba(143, 10, 125, 0.7);
+  /* background-color: rgba(143, 10, 125, 0.7); */
 }
 .chemia{
   top: 31%;
@@ -201,7 +201,29 @@ html, body {
   z-index: 9999;
   font-family: sans-serif;
 }
-/* Hamburger button */
+#nextClass {
+   display: none;
+    top: -107.9%;
+    left: 43.9%;
+    width: 5%;
+    height: 10.7%;
+    text-wrap: auto;
+  }
+#but {
+    position: relative;
+    z-index: 10;
+    padding: 10px;
+    margin: 5px;
+    background-color: #0000007a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    height: 100%;
+    font-family: sans-serif;
+    font-size: 90%;
+    width: 100%;
+    border-radius: 5px;
+}
 .hamburger {
   display: block;
   cursor: pointer;
@@ -215,12 +237,10 @@ html, body {
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-
-
-
-
-
-
-
-
-
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 3px 0;
+  transition: 0.4s;
+}
