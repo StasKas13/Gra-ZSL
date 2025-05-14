@@ -8,22 +8,27 @@
   <link rel="stylesheet" href="GameStart.css">
 </head>
 <body>
-    <div class="all">
-        <a href="aaaaaaaaaaa.html">
-            <button type="button">START</button>
-        </a>
-
-<div class="hamburger" onclick="toggleMenu()">
-  <div></div>
-  <div></div>
-  <div></div>
-</div>
-
 <nav class="menu" id="menu">
   <a href="GameStart.html">STRONA STARTOWA</a>
   <a href="#">WYBÓR GRACZA</a>
   <a href="informacje.html">INFORMACJE O GRZE</a>
 </nav>
+
+  <div id="main_div" class="map-container" style="display: flex; justify-content: center;align-items: center; background-color: white;">
+      
+    <div id="bg" style="background-image: url('szkola-front.jpg'); background-repeat: no-repeat; background-size: cover;">
+    <a class="but" href="aaaaaaaaaaa.html">
+      <button type="button" style="width: 12%; height: 16%; border-radius: 11%;">START</button>
+    </a>
+  </div>
+    
+
+  </div>
+<div class="hamburger" onclick="toggleMenu()">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
 
 <script>
 function toggleMenu() {
@@ -31,6 +36,23 @@ function toggleMenu() {
   menu.classList.toggle('active');
 }
 </script>
+<script>
+  function reiszemybg() {
+    md = document.getElementById('main_div');
+    bg = document.getElementById('bg');
 
+    bg.style.width = md.offsetWidth + "px";
+    bg.style.height = (((md.offsetWidth)/ 1980) * 1080) + "px";
+  }
+  window.addEventListener("resize", reiszemybg);
+  window.addEventListener('load', reiszemybg);
+</script>
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('active');
+    console.log("Menu toggled:", menu.classList.contains("active"));
+  }
+  </script>
 </body>
 </html>
