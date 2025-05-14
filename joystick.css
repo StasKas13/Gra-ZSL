@@ -203,12 +203,16 @@ html, body {
 }
 /* Hamburger button */
 .hamburger {
+  display: block;
+  cursor: pointer;
+  padding: 15px;
+  z-index: 999;
   position: fixed;
-  top: -100%;
-  left: 1%;
-  width: 35px;
-  height: 25px;
-  z-index: 9999;
+  top: 10px;
+  left: 10px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
 
