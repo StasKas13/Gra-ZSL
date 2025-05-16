@@ -188,18 +188,12 @@ const checkAnswer = (chosenIndex, correctIndex) => {
     }
     console.log("punkty:")
     console.log(punkty);
+
 // Po 2 sekundach zamykamy okno pytania
     setTimeout(() => {
         questionBox.style.display = "none";
     }, 2000);
-
-    if(punkty>=25){
-    alert("Możesz przejść do następnej klasy");
-    const next_class = document.getElementById("nextClass");
-    next_class.style.display = "flow";
-}
 };
-
 
 function startDrag(event) {
     dragging = true;
