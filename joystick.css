@@ -49,7 +49,17 @@ html, body {
   position: absolute;
   width: 18px;
   height: 18px;
-  background: red;
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  z-index: 100;
+}
+
+#player:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
 }
 
 
@@ -75,7 +85,6 @@ html, body {
 .answer-button:hover {
   background-color: lightgray;
 }
-/* -------------------------------------------------- */
 
 
 .map-container {
@@ -85,7 +94,6 @@ html, body {
   overflow: hidden;
 }
 
-/* Mapa jako tło przesunięte na dół */
 .map-container img.map-image {
   position: relative;
   top: 0; /* lub top: 50px; jak chcesz niżej */
