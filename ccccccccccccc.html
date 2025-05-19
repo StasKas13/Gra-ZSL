@@ -103,6 +103,34 @@
     menu.classList.toggle('active');
     console.log("Menu toggled:", menu.classList.contains("active"));
   }
+  
+  function selectPlayer(imageSrc) {
+      const player = document.getElementById("player");
+      player.style.backgroundImage = `url(${imageSrc})`;
+      player.style.backgroundColor = 'transparent';
+      localStorage.setItem("selectedPlayer", imageSrc);
+      closePlayerSelection();
+    }
+    const savedPlayer = localStorage.getItem("selectedPlayer");
+
+    if (savedPlayer) {
+      const player = document.getElementById("player");
+      player.style.width = '60px';
+      player.style.backgroundImage = `url(${savedPlayer})`;
+      player.style.backgroundColor = 'transparent';
+
+    } else {
+      const player = document.getElementById("player");
+      player.style.backgroundColor = 'red'; // default color when no image is chosen
+    }
+
+    // Wczytaj gracza
+    window.addEventListener("DOMContentLoaded", () => {
+      const savedPlayer = localStorage.getItem("selectedPlayer");
+      if (savedPlayer) {
+        document.getElementById("player").style.backgroundImage = `url(${savedPlayer})`;
+      }
+    });
   </script>
 
   
