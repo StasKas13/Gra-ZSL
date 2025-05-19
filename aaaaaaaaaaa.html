@@ -114,6 +114,15 @@
     <div id="answers"></div>
   </div>
 
+  <div id="playerSelection" class="hidden">
+    <h2>Wybierz gracza</h2>
+    <div class="player-options">
+      <img src="gracz1.png" alt="Gracz 1" onclick="selectPlayer('gracz1.png')" />
+      <img src="gracz2.png" alt="Gracz 2" onclick="selectPlayer('gracz2.png')" />
+    </div>
+    <button id="closeSelectionBtn" onclick="closePlayerSelection()">Zamknij</button>
+  </div>
+
   <div id="questionData" style="display: none;"></div>
 
   <script src="pytania_wszystkie.js"></script>
