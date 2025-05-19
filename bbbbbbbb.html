@@ -63,7 +63,7 @@
 
 <nav class="menu" id="menu">
   <a href="GameStart.html">STRONA STARTOWA</a>
-  <a href="#">WYBÓR GRACZA</a>
+   <a href="#" id="choosePlayerBtn">WYBÓR GRACZA</a>
   <a href="informacje.html">INFORMACJE O GRZE</a>
 </nav>
 
@@ -89,6 +89,14 @@
 </div>
 
 </div>
+<div id="playerSelection" class="hidden">
+    <h2>Wybierz gracza</h2>
+    <div class="player-options">
+      <img src="gracz1.png" alt="Gracz 1" onclick="selectPlayer('gracz1.png')" />
+      <img src="gracz2.png" alt="Gracz 2" onclick="selectPlayer('gracz2.png')" />
+    </div>
+    <button id="closeSelectionBtn" onclick="closePlayerSelection()">Zamknij</button>
+  </div>
 
 <div id="questionData" style="display: none;"></div>
 <script src="pytania_wszystkie.js"></script>
@@ -114,6 +122,7 @@
     menu.classList.toggle('active');
     console.log("Menu toggled:", menu.classList.contains("active"));
   }
+  
   function selectPlayer(imageSrc) {
       const player = document.getElementById("player");
       player.style.backgroundImage = `url(${imageSrc})`;
