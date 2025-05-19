@@ -15,13 +15,13 @@ html, body {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(155, 155, 155, 0.6);
 }
 .joystick-handle {
   position: absolute;
   width: 50px;
   height: 50px;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(51, 51, 51, 0.9);
   border-radius: 50%;
   top: 50%;
   left: 50%;
@@ -104,186 +104,217 @@ html, body {
   /* background-color: rgba(143, 10, 125, 0.7); */
 }
 .chemia{
-  top: 31%;
-  left: 24.3%;
-  width: 1%;
-  height: 3.7%;
+  top: 30.4%;
+  left: 24.2%;
+  width: 1.2%;
+  height: 4.5%;
 }
 .matma{
-  top: 27.3%;
-  left: 27.6%;
-  width: 1%;
-  height: 3.7%;
+  top: 26%;
+  left: 27.5%;
+  width: 1.2%;
+  height: 4.5%;
 }
 .geo{
-  top: 23.7%;
+  top: 21.3%;
   left: 30.9%;
-  width: 1%;
-  height: 3.7%;
+  width: 1.2%;
+  height: 4.5%;
 }
 .bazy{
-  top: 19.9%;
-  left: 34.1%;
-  width: 1%;
-  height: 3.7%;
+  top: 16.9%;
+  left: 34.3%;
+  width: 1.2%;
+  height: 4.5%;
 }
 .strony{
-  top: 16.3%;
-  left: 37.3%;
-  width: 1%;
-  height: 3.7%;
+  top: 12.4%;
+  left: 37.7%;
+  width: 1.2%;
+  height: 4.5%;
 }
 .bio{
-  top: 12.5%;
-  left: 40.5%;
-  width: 1%;
-  height: 3.7%;
+  top: 8%;
+  left: 41.2%;
+  width: 1.2%;
+  height: 4.5%;
 }
 .hist{
-  top: 9%;
-  left: 43.8%;
-  width: 1%;
-  height: 3.7%;
+  top: 3.5%;
+  left: 44.6%;
+  width: 1.2%;
+  height: 4.5%;
 }
 .ang{
-  top: 5%;
-  left: 47%;
-  width: 1%;
-  height: 3.8%;
+  top: -1.1%;
+  left: 47.9%;
+  width: 1.2%;
+  height: 4.5%;
 }
 .pol{
-  top: 31%;
-  left: 24.4%;
-  width: 1%;
-  height: 3.9%;
+  top: 30.2%;
+  left: 24.3%;
+  width: 4.3%;
+  height: 4.5%;
 }
 .fizyka{
-  top: 27.1%;
-  left: 27.6%;
-  width: 1%;
-  height: 4%;
+  top: 25.7%;
+  left: 31%;
+  width: 4.5%;
+  height: 4.5%;
 }
 .hiszpanski{
-  top: 23%;
-  left: 30.8%;
-  width: 1%;
-  height: 3.7%;
+  top: 21.2%;
+  left: 37.9%;
+  width: 4.5%;
+  height: 4.5%;
 }
 .inf{
-  top: 19.5%;
-  left: 34%;
-  width: 1%;
-  height: 3.7%;
+  top: 16.7%;
+  left: 44.7%;
+  width: 4.5%;
+  height: 4.5%;
 }
 .obiektowe{
-  top: 15.7%;
-  left: 37.3%;
-  width: 1%;
-  height: 3.7%;
+  top: 12.2%;
+  left: 51.4%;
+  width: 12%;
+  height: 4.5%;
 }
 .hit{
-  top: 12%;
-  left: 40.5%;
-  width: 1%;
-  height: 3.7%;
+  top: 23.2%;
+  left: 66.4%;
+  width: 12%;
+  height: 4%;
 }
 .niemiecki{
-  top: 8.5%;
-  left: 43.8%;
-  width: 1%;
-  height: 3.7%;
+  top: 31.6%;
+  left: 66.4%;
+  width: 12%;
+  height: 4.5%;
 }
 .pai{
-  top: 4.5%;
-  left: 46.9%;
-  width: 1%;
-  height: 3.7%;
+  top: 15%;
+  left: 80.4%;
+  width: 1.2%;
+  height: 16.3%;
 }
 .zpi{
-  top: 31%;
-  left: 24.4%;
-  width: 1%;
-  height: 3.7%;
+  top: 30.2%;
+  left: 24.3%;
+  width: 4.3%;
+  height: 4.5%;
 }
 .biz{
-  top: 27.4%;
-  left: 30.9%;
-  width: 1%;
-  height: 3.7%;
+  top: 25.7%;
+  left: 31%;
+  width: 4.5%;
+  height: 4.5%;
 }
 .p_inf{
-  top: 16.3%;
-  left: 34.1%;
-  width: 1%;
-  height: 3.7%;
+  top: 12.2%;
+  left: 51.4%;
+  width: 12%;
+  height: 4.5%;
 }
 .alg{
-  top: 12.5%;
-  left: 37.3%;
-  width: 1%;
-  height: 3.7%;
+  top: 23.2%;
+  left: 66.4%;
+  width: 12%;
+  height: 4%;
 }
 .muzyka{
-  top: 9%;
-  left: 43.8%;
-  width: 1%;
-  height: 3.7%;
+  top: 31.6%;
+  left: 66.4%;
+  width: 12%;
+  height: 4.5%;
 }
 .edb{
-  top: 5.3%;
-  left: 47%;
-  width: 1%;
-  height: 3.7%;
+  top: 15%;
+  left: 80.4%;
+  width: 1.2%;
+  height: 16.3%;
 }
 .mat{
-  top: 23.8%;
-  left: 27.6%;
-  width: 1%;
-  height: 3.7%;
+  top: 21.2%;
+  left: 37.9%;
+  width: 4.5%;
+  height: 4.5%;
 }
 .biol{
-  top: 20%;
-  left: 40.5%;
-  width: 1%;
-  height: 3.7%;
+  top: 16.7%;
+  left: 44.7%;
+  width: 4.5%;
+  height: 4.5%;
 }
 #sale {
-  top: 43.3%;
-  left: 24.5%;
-  width: 25.75%;
-  height: 7.2%;
+  top: 44.3%;
+  left: 24.2%;
+  width: 30%;
+  height: 7.9%;
 }
 
 #hol {
-  top: -25.2%;
-  left: 50.5%;
-  width: 11%;
-  height: 77.2%;
+  top: -33.2%;
+  left: 51.4%;
+  width: 12%;
+  height: 81.2%;
+}
+#hol_pietro {
+  top: -10.8%;
+  left: 51.4%;
+  width: 12%;
+  height: 48.2%;
 }
 #dyr {
-    top: -76.5%;
-    left: 61.25%;
-    width: 8.3%;
-    height: 24.5%;
-  }
+    top: -87%;
+    left: 63.25%;
+    width: 8.6%;
+    height: 26.5%;
+}
+#kor_pietro {
+    top: -44%;
+    left: 63.25%;
+    width: 16.5%;
+    height: 5.5%;
+}
 #schody{
-    top: -77.6%;
-    left: 44.9%;
+    top: -88.8%;
+    left: 46%;
     width: 6%;
     height: 7.7%;
 }
 
 #laz_l{
-    top: -77.6%;
-    left: 39.8%;
+    top: -88%;
+    left: 40.6%;
     width: 5%;
-    height: 8.5%;
+    height: 8.7%;
 }
 #laz_p{
-    top: -69.3%;
-    left: 44.9%;
-    width: 5.5%;
-    height: 12%;
+    top: -79.7%;
+    left: 45.9%;
+    width: 4.6%;
+    height: 12.3%;
+}
+#schody_pietro{
+    top: -46.1%;
+    left: 46%;
+    width: 6%;
+    height: 7.7%;
+}
+
+#laz_lpietro{
+    top: -45.5%;
+    left: 40.6%;
+    width: 5%;
+    height: 8.7%;
+}
+#laz_ppietro{
+    top: -37%;
+    left: 45.9%;
+    width: 4.6%;
+    height: 12.3%;
 }
 #scoreBox {
   position: fixed;
