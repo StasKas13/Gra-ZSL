@@ -1799,6 +1799,281 @@ let questions = {
       odpowiedzi: ["B", "11", "A", "1A"],
       poprawna: 2,
     }
+  ],
+  "EDB": [
+    {
+      pytanie: "Co należy zrobić w pierwszej kolejności przy udzielaniu pierwszej pomocy?",
+      odpowiedzi: [
+        "Sprawdzić puls",
+        "Zadzwonić do rodziny poszkodowanego",
+        "Ocenić bezpieczeństwo miejsca zdarzenia",
+        "Zdjąć ubranie poszkodowanemu"
+      ],
+      poprawna: 2
+    },
+    {
+      pytanie: "Jaki jest numer alarmowy do służb ratowniczych w całej Unii Europejskiej?",
+      odpowiedzi: ["112", "911", "999", "997"],
+      poprawna: 0
+    },
+    {
+      pytanie: "Co oznacza skrót RKO?",
+      odpowiedzi: [
+        "Ratownicze Kroki Obronne",
+        "Resuscytacja Krążeniowo-Oddechowa",
+        "Równoważne Kroki Obronne",
+        "Ruchy Kompensacyjne Oddychania"
+      ],
+      poprawna: 1
+    },
+    {
+      pytanie: "Co oznacza kolor czerwony w segregacji medycznej?",
+      odpowiedzi: [
+        "Lekko ranni",
+        "Wymagający natychmiastowej pomocy",
+        "Martwi",
+        "Oczekujący"
+      ],
+      poprawna: 1
+    },
+    {
+      pytanie: "Co to jest ewakuacja?",
+      odpowiedzi: [
+        "Atak obronny",
+        "Przeniesienie broni",
+        "Zorganizowane opuszczenie niebezpiecznego miejsca",
+        "Transport wojskowy"
+      ],
+      poprawna: 2
+    },
+    {
+      pytanie: "Która służba odpowiada za gaszenie pożarów?",
+      odpowiedzi: ["Policja", "Straż Pożarna", "Pogotowie", "Wojsko"],
+      poprawna: 1
+    },
+    {
+      pytanie: "Kto może udzielić pierwszej pomocy?",
+      odpowiedzi: [
+        "Tylko lekarz",
+        "Tylko ratownik medyczny",
+        "Każdy człowiek",
+        "Tylko pielęgniarka"
+      ],
+      poprawna: 2
+    },
+    {
+      pytanie: "Jakie zagrożenie niesie zatrucie tlenkiem węgla (czadem)?",
+      odpowiedzi: [
+        "Biegunka",
+        "Śmierć przez niedotlenienie organizmu",
+        "Przeziębienie",
+        "Kaszel"
+      ],
+      poprawna: 1
+    },
+    {
+      pytanie: "Jakie jest podstawowe działanie AED?",
+      odpowiedzi: [
+        "Pomiar temperatury",
+        "Automatyczna defibrylacja serca",
+        "Pomiar ciśnienia",
+        "Pompowanie tlenu"
+      ],
+      poprawna: 1
+    },
+    {
+      pytanie: "Jaki dokument określa zasady obrony cywilnej w Polsce?",
+      odpowiedzi: [
+        "Kodeks Karny",
+        "Prawo pracy",
+        "Konstytucja RP oraz ustawy o powszechnym obowiązku obrony",
+        "Ustawa o policji"
+      ],
+      poprawna: 2
+    }
+  ],
+  "Muzyka": [
+    {
+      pytanie: "Jak nazywa się pięciolinia z kluczem?",
+      odpowiedzi: ["Metronom", "Nutownik", "System nutowy", "Skala"],
+      poprawna: 2
+    },
+    {
+      pytanie: "Jak brzmi najwyższy głos żeński?",
+      odpowiedzi: ["Alt", "Sopran", "Mezzosopran", "Kontralt"],
+      poprawna: 1
+    },
+    {
+      pytanie: "Jak nazywa się symbol określający wysokość dźwięków na pięciolinii?",
+      odpowiedzi: ["Pauza", "Takt", "Klucz muzyczny", "Metrum"],
+      poprawna: 2
+    },
+    {
+      pytanie: "Który z tych kompozytorów był klasykiem wiedeńskim?",
+      odpowiedzi: ["Fryderyk Chopin", "Stanisław Moniuszko", "Wolfgang Amadeus Mozart", "Igor Strawiński"],
+      poprawna: 2
+    },
+    {
+      pytanie: "Ile linii ma pięciolinia?",
+      odpowiedzi: ["4", "5", "6", "7"],
+      poprawna: 1
+    },
+    {
+      pytanie: "Jak nazywa się tempo bardzo szybkie?",
+      odpowiedzi: ["Largo", "Andante", "Presto", "Moderato"],
+      poprawna: 2
+    },
+    {
+      pytanie: "Jak nazywa się grupa wykonawców grających na instrumentach smyczkowych, dętych i perkusyjnych?",
+      odpowiedzi: ["Chór", "Zespół rockowy", "Orkiestra", "Kwintet"],
+      poprawna: 2
+    },
+    {
+      pytanie: "Który z instrumentów należy do instrumentów dętych blaszanych?",
+      odpowiedzi: ["Klarnet", "Trąbka", "Flet", "Skrzypce"],
+      poprawna: 1
+    },
+    {
+      pytanie: 'Co oznacza skrót "ff" w zapisie nutowym?',
+      odpowiedzi: ["Bardzo wolno", "Bardzo szybko", "Fortissimo – bardzo głośno", "Fałszywa fraza"],
+      poprawna: 2
+    },
+    {
+      pytanie: "Jak nazywa się śpiew bez akompaniamentu instrumentalnego?",
+      odpowiedzi: ["Duet", "Forte", "A cappella", "Recitativo"],
+      poprawna: 2
+    }
+  ],
+
+  "Algorytmy": [
+    {
+      pytanie: "Co oznacza słowo kluczowe const w C++?",
+      odpowiedzi: ["Funkcja prywatna", "Stała pętla", "Wartość niezmienna po inicjalizacji", "Wskaźnik"],
+      poprawna: 2
+    },
+    {
+      pytanie: "Jakie jest domyślne dzielenie liczb całkowitych w C++?",
+      odpowiedzi: ["Z zaokrągleniem", "Z obcięciem części ułamkowej", "Z błędem", "Kompilator zgłasza błąd"],
+      poprawna: 1
+    },
+    {
+      pytanie: "Która z poniższych pętli zawsze wykona się co najmniej raz?",
+      odpowiedzi: ["for", "while", "do-while", "żadna"],
+      poprawna: 2
+    },
+    {
+      pytanie: "Jaką wartość przyjmie zmienna a po wykonaniu operacji: int a = 7 % 3;",
+      odpowiedzi: ["3", "2.33", "1", "0"],
+      poprawna: 2
+    },
+    {
+      pytanie: "Czym różni się vector<int> v; od int arr[100];?",
+      odpowiedzi: [
+        "vector jest tablicą stałą",
+        "vector ma dynamiczny rozmiar",
+        "arr może zwiększać rozmiar",
+        "vector nie obsługuje iteracji"
+      ],
+      poprawna: 1
+    },
+    {
+      pytanie: "Jakie będzie wyjście tego kodu?\nint a = 3, b = 4;\nswap(a, b);\ncout << a << \" \" << b;",
+      odpowiedzi: ["3 4", "4 3", "7 7", "Kompilator zgłosi błąd"],
+      poprawna: 1
+    },
+    {
+      pytanie: "Co oznacza rekurencja w programowaniu?",
+      odpowiedzi: [
+        "Pętla zagnieżdżona",
+        "Funkcja wywołująca samą siebie",
+        "Funkcja anonimowa",
+        "Operacja na wskaźnikach"
+      ],
+      poprawna: 1
+    },
+    {
+      pytanie: "Jaki warunek musi spełniać tablica, aby móc zastosować wyszukiwanie binarne?",
+      odpowiedzi: [
+        "Musi być posortowana rosnąco lub malejąco",
+        "Musi zawierać tylko liczby całkowite",
+        "Musi mieć rozmiar będący potęgą dwójki",
+        "Musi być dynamiczna"
+      ],
+      poprawna: 0
+    },
+    {
+      pytanie: "Co oznacza operator ++i w C++?",
+      odpowiedzi: [
+        "Zmniejsza i o 1",
+        "Zwiększa i o 1 przed użyciem wartości",
+        "Zwiększa i o 2",
+        "Ustawia i na zero"
+      ],
+      poprawna: 1
+    },
+    {
+      pytanie: "Jakie jest wyjście tego kodu?\nfor (int i = 0; i < 3; ++i) cout << i << \" \";",
+      odpowiedzi: ["1 2 3", "0 1 2", "0 1 2 3", "1 2"],
+      poprawna: 1
+    }
+  ],
+
+  "Podstawy informatyki": [
+    {
+      pytanie: "Jaką wartość dziesiętną ma liczba binarna 1010?",
+      odpowiedzi: ["8", "10", "12", "6"],
+      poprawna: 1
+    },
+    {
+      pytanie: "Ile różnych liczb można zapisać za pomocą 4 bitów?",
+      odpowiedzi: ["8", "16", "32", "10"],
+      poprawna: 1
+    },
+    {
+      pytanie: "Jak wygląda liczba 1111 w systemie dziesiętnym?",
+      odpowiedzi: ["13", "14", "15", "16"],
+      poprawna: 2
+    },
+    {
+      pytanie: "Który system liczbowy jest systemem szesnastkowym?",
+      odpowiedzi: ["Decymalny", "Binarny", "Heksadecymalny", "Oktalny"],
+      poprawna: 2
+    },
+    {
+      pytanie: "Ile bitów składa się na 1 bajt?",
+      odpowiedzi: ["4", "2", "8", "16"],
+      poprawna: 2
+    },
+    {
+      pytanie: "Jak zapisujemy liczbę 15 w systemie heksadecymalnym?",
+      odpowiedzi: ["10", "F", "E", "C"],
+      poprawna: 1
+    },
+    {
+      pytanie: "Jak zapisać dziesiętną liczbę 255 w systemie binarnym?",
+      odpowiedzi: ["11010101", "11100001", "11111111", "11111110"],
+      poprawna: 2
+    },
+    {
+      pytanie: "Co oznacza skrót CPU?",
+      odpowiedzi: [
+        "Central Public Unit",
+        "Computer Performance Utility",
+        "Central Processing Unit",
+        "Computer Processor Unit"
+      ],
+      poprawna: 2
+    },
+    {
+      pytanie: "Jakie są cyfry używane w systemie ósemkowym (oktalnym)?",
+      odpowiedzi: ["0–7 i A–F", "0–7", "1–8", "0–9"],
+      poprawna: 1
+    },
+    {
+      pytanie: "Jak zapisać liczbę 10 w systemie heksadecymalnym?",
+      odpowiedzi: ["B", "11", "A", "1A"],
+      poprawna: 2
+    }
   ]
 };
 
