@@ -193,6 +193,12 @@ const checkAnswer = (chosenIndex, correctIndex) => {
     setTimeout(() => {
         questionBox.style.display = "none";
     }, 2000);
+        
+    if(punkty>=25){
+    alert("Możesz przejść do następnej klasy");
+    const next_class = document.getElementById("nextClass");
+    next_class.style.display = "flow";
+    }
 };
 
 function startDrag(event) {
