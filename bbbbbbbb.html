@@ -10,15 +10,68 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="GameStart.css">
   <style>
+    .hidden {
+      display: none;
+    }
+
+    #playerSelection {
+      position: fixed;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: white;
+      padding: 20px;
+      border: 2px solid #333;
+      z-index: 1000;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      border-radius: 12px;
+    }
+
+    .player-options img {
+      width: 100px;
+      height: auto;
+      margin: 0 20px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .player-options img:hover {
+      transform: scale(1.1);
+    }
+
+    #player {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      /* background-color: red; */
+      border-radius: 50%;
+      z-index: 100;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    #closeSelectionBtn {
+      margin-top: 10px;
+      background-color: #ccc;
+      border: none;
+      padding: 6px 12px;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+
+    #closeSelectionBtn:hover {
+      background-color: #aaa;
+    }
     #nextClass {
-    display: none;
-    top: -76.5%;
+   display: none;
+    top: -56.5%;
     left: 44.9%;
     width: 5%;
     height: 10.7%;
     text-wrap: auto;
-}
-
+  }
   </style>
 </head>
 <body>
