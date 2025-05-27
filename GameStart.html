@@ -3,22 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Gra ZSŁ</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="GameStart.css">
 </head>
 <body>
 <nav class="menu" id="menu">
   <a href="GameStart.html">STRONA STARTOWA</a>
-  <a href="#">WYBÓR GRACZA</a>
+  <a href="#" id="choosePlayerBtn">WYBÓR GRACZA</a>
   <a href="informacje.html">INFORMACJE O GRZE</a>
 </nav>
 
+<div id="playerSelection" class="hidden">
+    <h2>Wybierz gracza</h2>
+    <div class="player-options">
+      <img src="gracz1.png" alt="Gracz 1" onclick="selectPlayer('gracz1.png')" />
+      <img src="gracz2.png" alt="Gracz 2" onclick="selectPlayer('gracz2.png')" />
+    </div>
+    <button id="closeSelectionBtn" onclick="closePlayerSelection()">Zamknij</button>
+  </div>
   <div id="main_div" class="map-container" style="display: flex; justify-content: center;align-items: center; background-color: white;">
       
     <div id="bg" style="background-image: url('szkola-front.jpg'); background-repeat: no-repeat; background-size: cover;">
     <a class="but" href="aaaaaaaaaaa.html">
-      <button type="button" style="width: 12%; height: 16%; border-radius: 11%;">START</button>
+      <button id="startBtn" disabled style="width: 12%; height: 16%; border-radius: 11%;">START</button>
     </a>
   </div>
     
@@ -29,30 +37,56 @@
   <div></div>
   <div></div>
 </div>
+<script>
+  let selectedPlayer = null;
 
-<script>
-function toggleMenu() {
-  const menu = document.getElementById('menu');
-  menu.classList.toggle('active');
-}
-</script>
-<script>
   function reiszemybg() {
-    md = document.getElementById('main_div');
-    bg = document.getElementById('bg');
-
+    const md = document.getElementById('main_div');
+    const bg = document.getElementById('bg');
     bg.style.width = md.offsetWidth + "px";
-    bg.style.height = (((md.offsetWidth)/ 1980) * 1080) + "px";
+    bg.style.height = ((md.offsetWidth / 1980) * 1080) + "px";
   }
   window.addEventListener("resize", reiszemybg);
-  window.addEventListener('load', reiszemybg);
-</script>
-<script>
+  window.addEventListener("load", reiszemybg);
+
   function toggleMenu() {
     const menu = document.getElementById('menu');
     menu.classList.toggle('active');
-    console.log("Menu toggled:", menu.classList.contains("active"));
   }
-  </script>
+
+  function selectPlayer(imageSrc) {
+    selectedPlayer = imageSrc;
+    localStorage.setItem("selectedPlayer", imageSrc);
+    document.getElementById("playerSelection").classList.add("hidden");
+    document.getElementById("startBtn").disabled = false;
+    console.log("Wybrano gracza:", imageSrc);
+  }
+
+  function closePlayerSelection() {
+    document.getElementById("playerSelection").classList.add("hidden");
+  }
+
+  document.getElementById("choosePlayerBtn").addEventListener("click", function (e) {
+    e.preventDefault();
+    document.getElementById("playerSelection").classList.remove("hidden");
+  });
+
+  document.getElementById("startBtn").addEventListener("click", function () {
+    const savedPlayer = localStorage.getItem("selectedPlayer");
+    if (savedPlayer) {
+      window.location.href = "aaaaaaaaaaa.html";
+    } else {
+      alert("Najpierw wybierz gracza!");
+    }
+  });
+
+  // Przy załadowaniu strony – jeśli zapisany gracz istnieje, odblokuj przycisk
+  window.addEventListener("DOMContentLoaded", () => {
+    const savedPlayer = localStorage.getItem("selectedPlayer");
+    if (savedPlayer) {
+      document.getElementById("startBtn").disabled = false;
+    }
+  });
+</script>
 </body>
 </html>

@@ -99,7 +99,6 @@
 
   <nav class="menu" id="menu">
     <a href="GameStart.html">STRONA STARTOWA</a>
-    <a href="#" id="choosePlayerBtn">WYBÓR GRACZA</a>
     <a href="informacje.html">INFORMACJE O GRZE</a>
   </nav>
 
@@ -186,5 +185,19 @@
       }
     });
   </script>
+  <script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const savedPlayer = localStorage.getItem("selectedPlayer");
+    const player = document.getElementById("player");
+
+    if (savedPlayer && player) {
+      player.style.backgroundImage = `url(${savedPlayer})`;
+      player.style.backgroundColor = 'transparent';
+    } else if (player) {
+      player.style.backgroundColor = 'red'; // fallback kolor
+    }
+  });
+</script>
+
 </body>
 </html>
