@@ -25,9 +25,7 @@
   <div id="main_div" class="map-container" style="display: flex; justify-content: center;align-items: center; background-color: white;">
       
     <div id="bg" style="background-image: url('szkola-front.jpg'); background-repeat: no-repeat; background-size: cover;">
-    <a class="but" href="aaaaaaaaaaa.html">
-      <button id="startBtn" disabled style="width: 12%; height: 16%; border-radius: 11%;">START</button>
-    </a>
+    <button class="but" id="startBtn" style="width: 12%; height: 16%; border-radius: 11%;">START</button>
   </div>
     
 
@@ -72,13 +70,13 @@
   });
 
   document.getElementById("startBtn").addEventListener("click", function () {
-    const savedPlayer = localStorage.getItem("selectedPlayer");
-    if (savedPlayer) {
-      window.location.href = "aaaaaaaaaaa.html";
-    } else {
-      alert("Najpierw wybierz gracza!");
-    }
-  });
+  const savedPlayer = localStorage.getItem("selectedPlayer");
+  if (savedPlayer) {
+    window.location.href = "aaaaaaaaaaa.html";
+  } else {
+    alert("Najpierw wybierz gracza! \nZnajdziesz tą opcje w menu :)");
+  }
+});
 
   // Przy załadowaniu strony – jeśli zapisany gracz istnieje, odblokuj przycisk
   window.addEventListener("DOMContentLoaded", () => {
