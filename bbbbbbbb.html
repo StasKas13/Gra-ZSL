@@ -72,6 +72,11 @@
     height: 10.7%;
     text-wrap: auto;
   }
+  button {
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -106,7 +111,9 @@
     
 
   </div>
-  
+  <audio id="bgAudio" loop>
+    <source src="dzwiektlo.mp3" type="audio/mpeg">
+  </audio>
 <!-- MENU FIXED -->
 <div class="hamburger" onclick="toggleMenu()">
   <div></div>
@@ -118,6 +125,7 @@
   <a href="GameStart.html">STRONA STARTOWA</a>
    <a href="#" id="choosePlayerBtn">WYBÓR GRACZA</a>
   <a href="informacje.html">INFORMACJE O GRZE</a>
+  <button id="toggleAudioButton" onclick="toggleAudio()">Start dźwięku</button>
 </nav>
 
 
@@ -159,6 +167,21 @@
 
 <script src="movement.js"></script>
 <script>
+  const audio = document.getElementById("bgAudio");
+    const button = document.getElementById("toggleAudioButton");
+
+    function toggleAudio() {
+      if (audio.paused) {
+        audio.play().then(() => {
+          button.textContent = "Stop dźwięku";
+        }).catch(error => {
+          alert("Nie udało się odtworzyć dźwięku: " + error.message);
+        });
+      } else {
+        audio.pause();
+        button.textContent = "Start dźwięku";
+      }
+    }
   function reiszemybg() {
     md = document.getElementById('main_div');
     bg = document.getElementById('bg');
