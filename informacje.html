@@ -52,6 +52,20 @@
           box-shadow: none;
           transform: translateY(0);
       }
+      .spis {
+  background-color: white;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1000px;
+  height: 200px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  
+  background-image: url('spis.png'); /* <-- podaj tu ścieżkę do zdjęcia */
+  background-size: cover; /* <-- kluczowe, żeby zdjęcie wypełniło diva */
+  background-position: center; /* opcjonalne: centrowanie obrazu */
+  background-repeat: no-repeat; 
+}
     </style>
   </head>
   <body>
@@ -72,6 +86,22 @@
       <h2>🖌 Grafika</h2>
       <ul>
         <li>📌 Mateusz </li>
+      </ul>
+    </div>
+    <div class="spis">
+      
+    </div>
+    <div class="section">
+      <h2>Spis sal</h2>
+      <ul>
+        <li>1️⃣ Chemia</li>
+        <li>2️⃣ Matematyka</li>
+        <li>3️⃣ Geografia</li>
+        <li>4️⃣ Zarządzanie bazami danych</li>
+        <li>5️⃣ Projektowanie stron internetowych</li>
+        <li>6️⃣ Biologia</li>
+        <li>7️⃣ Historia</li>
+        <li>8️⃣ Język angielski</li>
       </ul>
     </div>
     <button class="back" onclick="window.history.back()" >WRÓĆ ↩️ </button>
