@@ -61,9 +61,23 @@
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   
-  background-image: url('spis.png'); /* <-- podaj tu ścieżkę do zdjęcia */
-  background-size: cover; /* <-- kluczowe, żeby zdjęcie wypełniło diva */
-  background-position: center; /* opcjonalne: centrowanie obrazu */
+  background-image: url('spis.png'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+     .spis2 {
+  background-color: white;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1000px;
+  height: 350px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  
+  background-image: url('spis2.png'); 
+  background-size: cover; 
+  background-position: center; 
   background-repeat: no-repeat; 
 }
     </style>
@@ -88,11 +102,9 @@
         <li>📌 Mateusz </li>
       </ul>
     </div>
-    <div class="spis">
-      
-    </div>
+    <div class="spis"></div>
     <div class="section">
-      <h2>Spis sal</h2>
+      <h2>Spis sal parter</h2>
       <ul>
         <li>1️⃣ Chemia</li>
         <li>2️⃣ Matematyka</li>
@@ -102,6 +114,20 @@
         <li>6️⃣ Biologia</li>
         <li>7️⃣ Historia</li>
         <li>8️⃣ Język angielski</li>
+      </ul>
+    </div>
+    <div class="spis2"></div>
+    <div class="section">
+      <h2>Spis sal piętro 1</h2>
+      <ul>
+        <li>1️⃣ Język polski</li>
+        <li>2️⃣ Fizyka</li>
+        <li>3️⃣ Język hiszpański</li>
+        <li>4️⃣ Informatyka</li>
+        <li>5️⃣ Programowanie obiektowe</li>
+        <li>6️⃣ Historia i teraźniejszość</li>
+        <li>7️⃣ Programowanie aplikacji internetowych</li>
+        <li>8️⃣ Język niemiecki</li>
       </ul>
     </div>
     <button class="back" onclick="window.history.back()" >WRÓĆ ↩️ </button>
