@@ -1328,7 +1328,7 @@ let questions = {
       poprawna: 2,
     },
   ],
-  PAI: [
+  "Programowanie aplikacji internetowych": [
     {
       pytanie: "Jakim językiem tworzy się strukturę strony internetowej?",
       odpowiedzi: ["CSS", "HTML", "JavaScript", "PHP"],
@@ -1405,7 +1405,7 @@ let questions = {
       poprawna: 1,
     },
   ],
-  ZPI: [
+  "Zarzadzanie projektem informatycznym": [
     {
       pytanie: "Co to jest projekt?",
       odpowiedzi: [
