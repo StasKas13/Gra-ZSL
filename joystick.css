@@ -105,11 +105,11 @@ html, body {
 }
 .block {
   position: relative;
-  background-color: rgba(0, 0, 255, 0.3); 
+  /*background-color: rgba(0, 0, 255, 0.3);*/
 }
 .room {
   position: relative;
-   background-color: rgba(143, 10, 125, 0.7); 
+  /* background-color: rgba(143, 10, 125, 0.7); */
 }
 .chemia{
   top: 34%;
