@@ -11,6 +11,44 @@ let joystickCenter = { x: 0, y: 0 };
 let lastRoom = null;
 let hasAnswered = false; // Zmienna zapobiegająca wielokrotnemu losowaniu pytania
 
+let gameStartTime = null;
+let gameEndTime = null;
+let savedTime = 0;
+
+let savedPoints = 0;
+let sum_points = 0;
+let punkty = 0;
+
+document.addEventListener("DOMContentLoaded", () => {
+    updateJoystickCenter();
+    gameStartTime = Date.now(); // Start pomiaru czasu
+
+    const stored = localStorage.getItem("punkty");
+    if (stored) {
+        savedPoints = parseInt(stored);
+        sum_points = savedPoints;
+    }
+    const storedTime = localStorage.getItem("savedTime");
+    if (storedTime) {
+        savedTime = parseInt(storedTime);
+    }
+
+
+    updateScoreDisplay(); // pokazujemy sumę punktów (saved + sesja)
+    gameLoop();
+});
+
+document.getElementById("resetPointsBtn").addEventListener("click", () => {
+    if (confirm("Czy na pewno chcesz zresetować wszystkie punkty?")) {
+        punkty = 0;
+        savedPoints = 0;
+        sum_points = 0;
+        localStorage.setItem("punkty", "0");
+        updateScoreDisplay();
+        alert("Punkty zostały zresetowane.");
+    }
+});
+
 let player = {
     x: sale ? sale.offsetLeft : 625,
     y: sale ? sale.offsetTop : 790,
@@ -39,6 +77,8 @@ document.addEventListener("DOMContentLoaded", () => {
 function gameLoop() {
     updatePlayer();
     requestAnimationFrame(gameLoop);
+    updateScoreDisplay(); // dzięki temu czas odświeża się cały czas
+
 }
 
 function updatePlayer() {
@@ -162,11 +202,10 @@ const showQuestion = (subject, question) => {
 };
 
 // Funkcja sprawdzająca poprawność odpowiedzi
-let punkty = 0;
 const scoreBox = document.getElementById("scoreBox");
 const checkAnswer = (chosenIndex, correctIndex) => {
-    if (hasAnswered) return; // Zapobiegamy wielokrotnemu odpowiadaniu
-    hasAnswered = true; // Oznaczamy, że odpowiedzieliśmy
+    if (hasAnswered) return;
+    hasAnswered = true;
 
     const buttons = answersContainer.querySelectorAll(".answer-button");
 
@@ -183,23 +222,39 @@ const checkAnswer = (chosenIndex, correctIndex) => {
     });
 
     if (chosenIndex === correctIndex) {
-        punkty++;
-        scoreBox.textContent = `Punkty: ${punkty}`;
+        punkty++;                                       // zwiększ punkty sesyjne
+        savedPoints = sum_points + punkty;              // zwiększ zapisane
+        localStorage.setItem("punkty", savedPoints);    // zapisz w localStorage
+        updateScoreDisplay();                           // pokaż wynik
     }
-    console.log("punkty:")
-    console.log(punkty);
 
-// Po 2 sekundach zamykamy okno pytania
     setTimeout(() => {
         questionBox.style.display = "none";
     }, 2000);
-        
-    if(punkty>=25){
-    alert("Możesz przejść do następnej klasy");
-    const next_class = document.getElementById("nextClass");
-    next_class.style.display = "flow";
+
+    if(punkty == 25){
+        alert("Możesz przejść do następnej klasy");
+    }
+    if (punkty >= 25) {
+        const next_class = document.getElementById("nextClass");
+        next_class.style.display = "flow";
     }
 };
+function updateScoreDisplay() {
+    const now = Date.now();
+    const sessionElapsed = Math.floor((now - gameStartTime) / 1000);
+    const elapsed = savedTime + sessionElapsed;
+
+    // Zapisz czas cały czas
+    localStorage.setItem("savedTime", elapsed.toString());
+
+    const minutes = Math.floor(elapsed / 60);
+    const seconds = elapsed % 60;
+
+    scoreBox.innerHTML = `Punkty: ${punkty} <br>
+        Wszystkie punkty: ${savedPoints} <br>
+        Czas: ${minutes}m ${seconds}s`;
+}
 
 function startDrag(event) {
     dragging = true;

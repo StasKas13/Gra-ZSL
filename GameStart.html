@@ -12,6 +12,7 @@
   <a href="GameStart.html">STRONA STARTOWA</a>
   <a href="#" id="choosePlayerBtn">WYBÓR GRACZA</a>
   <a href="informacje.html">INFORMACJE O GRZE</a>
+  <a href="#" id="score">ZOBACZ SWÓJ WYNIK</a>
 </nav>
 
 <div id="playerSelection" class="hidden">
@@ -22,6 +23,13 @@
     </div>
     <button id="closeSelectionBtn" onclick="closePlayerSelection()">Zamknij</button>
   </div>
+
+  <div id="playerScore" class="hidden">
+    <h2>Twój wynik</h2>
+    <h4 id="scorePlace"></h4>
+  <button id="closeSelectionBtn" onclick="closeScore()">Zamknij</button>
+  </div>
+
   <div id="main_div" class="map-container" style="display: flex; justify-content: center;align-items: center; background-color: white;">
       
     <div id="bg" style="background-image: url('szkola-front.jpg'); background-repeat: no-repeat; background-size: cover;">
@@ -36,6 +44,35 @@
   <div></div>
 </div>
 <script>
+window.addEventListener("DOMContentLoaded", () => {
+  const savedPlayer = localStorage.getItem("selectedPlayer");
+  const startBtn = document.getElementById("startBtn");
+  if (savedPlayer) {
+    startBtn.disabled = false;
+  } else {
+    startBtn.disabled = true;
+  }
+});
+
+document.getElementById("startBtn").addEventListener("click", function () {
+  const savedPlayer = localStorage.getItem("selectedPlayer");
+  if (savedPlayer) {
+    window.location.href = "aaaaaaaaaaa.html";
+  } else {
+    alert("Najpierw wybierz gracza! \nZnajdziesz tą opcje w menu :)");
+  }
+});
+document.getElementById("startBtn").addEventListener("click", () => {
+    punkty = 0;
+    savedPoints = 0;
+    sum_points = 0;
+    savedTime = 0;
+    localStorage.setItem("punkty", "0");
+    localStorage.setItem("savedTime", "0");  // <-- reset czasu
+    updateScoreDisplay();  
+});
+
+
   let selectedPlayer = null;
 
   function reiszemybg() {
@@ -68,6 +105,25 @@
     e.preventDefault();
     document.getElementById("playerSelection").classList.remove("hidden");
   });
+
+function formatTime(seconds) {
+  seconds = Number(seconds);
+  const min = Math.floor(seconds / 60);
+  const sec = seconds % 60;
+  return `${min}:${sec < 10 ? '0' : ''}${sec}`;
+}
+
+document.getElementById("score").addEventListener("click", function (e) {
+  e.preventDefault();
+  const wynik_p = localStorage.getItem("punkty") || 0;
+  const wynik_t = localStorage.getItem("savedTime") || 0;
+  const czasFormatowany = formatTime(wynik_t);
+  document.getElementById("scorePlace").innerHTML = `Punkty: ${wynik_p} punktów <br> Czas: ${czasFormatowany} (mm:ss)`;
+  document.getElementById("playerScore").classList.remove("hidden");
+});
+function closeScore() {
+  document.getElementById("playerScore").classList.add("hidden");
+}
 
   document.getElementById("startBtn").addEventListener("click", function () {
   const savedPlayer = localStorage.getItem("selectedPlayer");
