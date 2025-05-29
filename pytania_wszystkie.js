@@ -2077,24 +2077,23 @@ let questions = {
   ],
   Quiz:[
     {
-      pytanie: "Jak zapisać liczbę 10 w systemie heksadecymalnym?",
-      odpowiedzi: ["B", "11", "A", "1A"],
-      poprawna: 2
-    },
-    {
-      pytanie: "Co oznacza skrót CPU?",
-      odpowiedzi: [
-        "Central Public Unit",
-        "Computer Performance Utility",
-        "Central Processing Unit",
-        "Computer Processor Unit"
-      ],
-      poprawna: 2
-    },
-    {
-      pytanie: "Jakie są cyfry używane w systemie ósemkowym (oktalnym)?",
-      odpowiedzi: ["0–7 i A–F", "0–7", "1–8", "0–9"],
+      pytanie: "Gdzie urodził się Mikołaj Kopernik?",
+      odpowiedzi: ["W Toruniu", "W Krakowie", "W Gdansku"],
       poprawna: 1
+    },
+    {
+      pytanie: "Jakie było najwieksze dzieło Mikołaja Kopernika?",
+      odpowiedzi: [
+        "O obrotach Ziemi i Słońca",
+        "Kosmos i człowiek",
+        "De revolutionibus orbium coelestium"
+      ],
+      poprawna: 3
+    },
+    {
+      pytanie: "Z kim spotkał się Kopernik podczas pobytu we Włoszech?",
+      odpowiedzi: [ "Z Galileuszem","Z Leonarderm da Vinci", "Z Michałem Aniołem"],
+      poprawna: 2
     }
   ]
 };
