@@ -491,8 +491,8 @@ function moveDrag(event) {
 
     joystickHandle.style.transform = `translate(${handleX}px, ${handleY}px)`;
 
-    player.dx = Math.cos(angle) * (distance / 40) * player.speed;
-    player.dy = Math.sin(angle) * (distance / 40) * player.speed;
+    player.dx = Math.cos(angle) * (distance / 60) * player.speed;
+    player.dy = Math.sin(angle) * (distance / 60) * player.speed;
 }
 
 function updateJoystickCenter() {
