@@ -103,7 +103,7 @@
     <div class="block" id="laz_lpietro"></div>
     <div id="scoreBox">Punkty: 0</div>
     <a class="block" id="nextClass" href="GameStart.html">
-        <button id="but">kliknij by zakonczyc gre</button>
+        <button id="but">Kliknij by zakonczyc gre, zobacz swój wynik na stronie głównej w menu!!!</button>
       </a>
     
   </div>
@@ -125,6 +125,7 @@
   <a href="GameStart.html">STRONA STARTOWA</a>
   <a href="informacje.html">INFORMACJE O GRZE</a>
   <button id="toggleAudioButton" onclick="toggleAudio()">Start dźwięku</button>
+  <button id="resetPointsBtn">Resetuj punkty</button>
 </nav>
 
 
@@ -243,7 +244,46 @@
     }
   });
   </script>
+<script>
+    const scoreBox = document.getElementById("scoreBox");
+const checkAnswer = (chosenIndex, correctIndex) => {
+    if (hasAnswered) return;
+    hasAnswered = true;
 
+    const buttons = answersContainer.querySelectorAll(".answer-button");
+
+    buttons.forEach((btn, index) => {
+        btn.disabled = true;
+        if (index === correctIndex) {
+            btn.style.backgroundColor = "green";
+            btn.style.color = "white";
+        }
+        if (index === chosenIndex && index !== correctIndex) {
+            btn.style.backgroundColor = "red";
+            btn.style.color = "white";
+        }
+    });
+
+    if (chosenIndex === correctIndex) {
+        punkty++;                                       // zwiększ punkty sesyjne
+        savedPoints = sum_points + punkty;              // zwiększ zapisane
+        localStorage.setItem("punkty", savedPoints);    // zapisz w localStorage
+        updateScoreDisplay();                           // pokaż wynik
+    }
+
+    setTimeout(() => {
+        questionBox.style.display = "none";
+    }, 2000);
+
+    if(punkty == 25){
+        alert("Ukończyłeś grę :))\nZobacz swój wynik na stronie głównej w menu!!!");
+    }
+    if (punkty >= 25) {
+        const next_class = document.getElementById("nextClass");
+        next_class.style.display = "flow";
+    }
+};
+</script>
   
 </body>
 </html>
