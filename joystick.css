@@ -407,7 +407,7 @@ html, body {
     }
 
     .room-popup img {
-      max-width: 40%;  /* lub inna wartość, np. 100%, 200px itd. */
+      max-width: 400px;  /* lub inna wartość, np. 100%, 200px itd. */
       height: auto;      /* zachowuje proporcje */
       display: block;
       margin: 0 auto;    /* centrowanie */

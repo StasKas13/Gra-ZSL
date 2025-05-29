@@ -270,7 +270,7 @@ function showRoomPopup(subject) {
 
   popup.innerHTML = `
     <div class="popup-content">
-      <img src="${subject}.jpg" alt="${subject}" style="max-width: 300px; height: auto; display: block; margin: 0 auto;" />
+      <img src="${subject}.jpg" alt="${subject}"/>
       <p>Wchodzisz do sali: <strong>${subject}</strong></p>
       <button class="start-quiz">Rozpocznij quiz</button>
       <button class="close-popup">Zamknij</button>
