@@ -2074,6 +2074,28 @@ let questions = {
       odpowiedzi: ["B", "11", "A", "1A"],
       poprawna: 2
     }
+  ],
+  Quiz:[
+    {
+      pytanie: "Jak zapisać liczbę 10 w systemie heksadecymalnym?",
+      odpowiedzi: ["B", "11", "A", "1A"],
+      poprawna: 2
+    },
+    {
+      pytanie: "Co oznacza skrót CPU?",
+      odpowiedzi: [
+        "Central Public Unit",
+        "Computer Performance Utility",
+        "Central Processing Unit",
+        "Computer Processor Unit"
+      ],
+      poprawna: 2
+    },
+    {
+      pytanie: "Jakie są cyfry używane w systemie ósemkowym (oktalnym)?",
+      odpowiedzi: ["0–7 i A–F", "0–7", "1–8", "0–9"],
+      poprawna: 1
+    }
   ]
 };
 

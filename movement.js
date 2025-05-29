@@ -10,6 +10,9 @@ let joystickCenter = { x: 0, y: 0 };
 
 let lastRoom = null;
 let hasAnswered = false; // Zmienna zapobiegająca wielokrotnemu losowaniu pytania
+let lastQuizRoom = null;
+let currentQuizQuestions = [];
+let currentQuizIndex = 0;
 
 let player = {
     x: sale ? sale.offsetLeft : 625,
@@ -75,6 +78,7 @@ function updatePlayer() {
     }
 
     checkCollision(); // Jeśli masz inne kolizje
+    checkCollisionQuiz();
 }
 
 
@@ -139,6 +143,8 @@ const checkCollision = () => {
     }
 };
 
+
+
 // ** Pytania i sprawdzanie odpowiedzi **
 const questionBox = document.getElementById("questionBox");
 const questionText = document.getElementById("questionText");
@@ -200,6 +206,208 @@ const checkAnswer = (chosenIndex, correctIndex) => {
     next_class.style.display = "flow";
     }
 };
+
+// quiz
+function showRoomPopup(subject) {
+  if (document.querySelector('.room-popup')) return;
+  const popup = document.createElement("div");
+  popup.classList.add("room-popup");
+
+  popup.innerHTML = `
+    <div class="popup-content">
+      <img src="${subject}.jpg" alt="${subject}" style="max-width: 300px; height: auto; display: block; margin: 0 auto;" />
+      <p>Wchodzisz do sali: <strong>${subject}</strong></p>
+      <button class="start-quiz">Rozpocznij quiz</button>
+      <button class="close-popup">Zamknij</button>
+    </div>
+  `;
+
+  document.body.appendChild(popup);
+
+  // Teraz znajdujemy przyciski tylko w ramach popupu
+  const startButton = popup.querySelector(".start-quiz");
+  const closeButton = popup.querySelector(".close-popup");
+
+  startButton.addEventListener("click", () => {
+    popup.remove();
+    currentQuizQuestions = window.getQuestion?.(subject) || [];
+    currentQuizIndex = 0;
+
+    if (currentQuizQuestions.length > 0) {
+        showNextQuizQuestion(subject);
+    } else {
+       console.warn("Brak pytań dla:", subject);
+    }
+
+  });
+
+  closeButton.addEventListener("click", () => {
+    popup.remove();
+  });
+}
+function showNextQuizQuestion(subject) {
+  if (currentQuizIndex >= currentQuizQuestions.length) {
+    alert("Zakończono quiz z przedmiotu: " + subject);
+    questionBox.style.display = "none";
+    return;
+  }
+
+  const question = currentQuizQuestions[currentQuizIndex];
+  hasAnswered = false;
+
+  questionText.textContent = `Pytanie ${currentQuizIndex + 1}/${currentQuizQuestions.length} z ${subject}: ${question.pytanie}`;
+  answersContainer.innerHTML = "";
+
+  question.odpowiedzi.forEach((odp, index) => {
+    const answerBtn = document.createElement("button");
+    answerBtn.textContent = odp;
+    answerBtn.classList.add("answer-button");
+    answerBtn.addEventListener("click", () => {
+      checkAnswerQuiz(index, question.poprawna, subject);
+    });
+    answersContainer.appendChild(answerBtn);
+  });
+
+  questionBox.style.display = "block";
+}
+
+
+function checkCollisionQuiz() {
+    const playerRect = {
+        left: player.x,
+        top: player.y,
+        right: player.x + playerElement.offsetWidth,
+        bottom: player.y + playerElement.offsetHeight
+    };
+
+    const rooms = document.querySelectorAll('.room2');
+    let inQuizRoom = false;
+
+    for (let room of rooms) {
+        const roomRectRelative = {
+            left: room.offsetLeft,
+            top: room.offsetTop,
+            right: room.offsetLeft + room.offsetWidth,
+            bottom: room.offsetTop + room.offsetHeight
+        };
+
+        const collision = !(playerRect.right <= roomRectRelative.left ||
+                            playerRect.left >= roomRectRelative.right ||
+                            playerRect.bottom <= roomRectRelative.top ||
+                            playerRect.top >= roomRectRelative.bottom);
+
+        if (collision) {
+            inQuizRoom = true;
+
+            // Sprawdź, czy to nowy pokój quizu
+            if (lastQuizRoom === room.id) return;
+
+            lastQuizRoom = room.id; // Zapisujemy pokój, żeby nie pokazywać quizu wielokrotnie
+
+            const subject = room.dataset.subject;
+            const question = window.getQuestion = function(subject) {
+                  return window.questions[subject] || [];
+                };
+
+            if (question) {
+                showRoomPopup(subject);
+            } else {
+                console.warn("Brak pytania dla:", subject);
+            }
+
+            // Zatrzymaj ruch
+            player.dx = 0;
+            player.dy = 0;
+            break;
+        }
+    }
+
+    // Jeśli nie jesteśmy w żadnym pokoju – resetujemy
+    if (!inQuizRoom) {
+        lastQuizRoom = null;
+    }
+}
+
+
+function showQuestionQuiz(subject, question) {
+  //if (hasAnswered) return;
+
+  questionText.textContent = `Pytanie z ${subject}: ${question.pytanie}`;
+  answersContainer.innerHTML = "";
+
+  question.odpowiedzi.forEach((odp, index) => {
+    const answerBtn = document.createElement("button");
+    answerBtn.textContent = odp;
+    answerBtn.classList.add("answer-button");
+    answerBtn.addEventListener("click", () => checkAnswer(index, question.poprawna));
+    answersContainer.appendChild(answerBtn);
+  });
+
+  questionBox.style.display = "block";
+}
+
+function checkAnswerQuiz(chosenIndex, correctIndex, subject) {
+  if (hasAnswered) return;
+  hasAnswered = true;
+
+  const buttons = answersContainer.querySelectorAll(".answer-button");
+
+  buttons.forEach((btn, index) => {
+    btn.disabled = true;
+    if (index === correctIndex) {
+      btn.style.backgroundColor = "green";
+      btn.style.color = "white";
+    }
+    if (index === chosenIndex && index !== correctIndex) {
+      btn.style.backgroundColor = "red";
+      btn.style.color = "white";
+    }
+  });
+
+  if (chosenIndex === correctIndex) {
+    punkty += 2;
+    scoreBox.textContent = `Punkty: ${punkty}`;
+  }
+
+  setTimeout(() => {
+    currentQuizIndex++;
+    showNextQuizQuestion(subject);
+  }, 1500);
+
+  if (punkty >= 25) {
+    alert("Możesz przejść do następnej klasy");
+    const next_class = document.getElementById("nextClass");
+    next_class.style.display = "flow";
+  }
+}
+
+
+// Rozszerzona wersja dla samokształceniowej sali
+
+function startQuiz() {
+  const question = window.currentQuestion;
+  questionBox.innerHTML = `
+    <p>${question.questionText}</p>
+    <div>
+      <button onclick="answerQuestion('${question.options[0]}')">${question.options[0]}</button>
+      <button onclick="answerQuestion('${question.options[1]}')">${question.options[1]}</button>
+    </div>
+  `;
+}
+
+function closeQuiz() {
+  questionBox.style.display = "none";
+}
+
+function answerQuestionQuiz(selectedAnswer) {
+  if (hasAnswered) return;
+  hasAnswered = true;
+
+  const correct = selectedAnswer === window.currentQuestion.correctAnswer;
+  alert(correct ? "Dobra odpowiedź!" : "Zła odpowiedź!");
+  questionBox.style.display = "none";
+}
+
 
 function startDrag(event) {
     dragging = true;

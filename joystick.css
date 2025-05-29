@@ -73,6 +73,12 @@ html, body {
   padding: 20px;
   border: 2px solid black;
 }
+#question-box {
+  display: none !important;
+  visibility: hidden;
+  opacity: 0;
+}
+
 .answer-button {
   padding: 10px;
   margin: 5px;
@@ -105,11 +111,17 @@ html, body {
 }
 .block {
   position: relative;
-  /*background-color: rgba(0, 0, 255, 0.3);*/
+  background-color: rgba(0, 0, 255, 0.3);
 }
-.room {
+.room, .room2 {
   position: relative;
-  /* background-color: rgba(143, 10, 125, 0.7); */
+   background-color: rgba(143, 10, 125, 0.7); 
+}
+.samokrztalceniowa{
+  top: -75.5%;
+  left: 64.4%;
+  width: 7%;
+  height: 15.5%;
 }
 .chemia{
   top: 34%;
@@ -265,7 +277,7 @@ html, body {
 #hol {
   top: -22.2%;
   left: 52.4%;
-  width: 10%;
+  width: 10.4%;
   height: 80.2%;
 }
 #hol_pietro {
@@ -275,10 +287,10 @@ html, body {
   height: 46.2%;
 }
 #dyr {
-    top: -75.5%;
+    top: -69.5%;
     left: 62.25%;
     width: 8.6%;
-    height: 25.5%;
+    height: 4%;
 }
 #kor_pietro {
     top: -28%;
@@ -287,20 +299,20 @@ html, body {
     height: 3.3%;
 }
 #schody{
-    top: -76.3%;
+    top: -70.5%;
     left: 47%;
     width: 6%;
     height: 7.4%;
 }
 
 #laz_l{
-    top: -75%;
+    top: -69%;
     left: 41.6%;
     width: 5%;
     height: 8.5%;
 }
 #laz_p{
-    top: -66.7%;
+    top: -60.5%;
     left: 46.9%;
     width: 4.6%;
     height: 12%;
@@ -380,3 +392,30 @@ html, body {
   margin: 3px 0;
   transition: 0.4s;
 }
+.room-popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      border: 3px solid #444;
+      border-radius: 10px;
+      padding: 20px;
+      z-index: 9999;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      text-align: center;
+    }
+
+    .room-popup img {
+      max-width: 40%;  /* lub inna wartość, np. 100%, 200px itd. */
+      height: auto;      /* zachowuje proporcje */
+      display: block;
+      margin: 0 auto;    /* centrowanie */
+}
+
+    .room-popup button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
