@@ -2084,16 +2084,16 @@ let questions = {
     {
       pytanie: "Jakie było najwieksze dzieło Mikołaja Kopernika?",
       odpowiedzi: [
+        "De revolutionibus orbium coelestium",
         "O obrotach Ziemi i Słońca",
-        "Kosmos i człowiek",
-        "De revolutionibus orbium coelestium"
+        "Kosmos i człowiek"
       ],
-      poprawna: 3
+      poprawna: 1
     },
     {
       pytanie: "Z kim spotkał się Kopernik podczas pobytu we Włoszech?",
-      odpowiedzi: [ "Z Galileuszem","Z Leonarderm da Vinci", "Z Michałem Aniołem"],
-      poprawna: 2
+      odpowiedzi: ["Z Leonarderm da Vinci", "Z Galileuszem", "Z Michałem Aniołem"],
+      poprawna: 1
     }
   ]
 };

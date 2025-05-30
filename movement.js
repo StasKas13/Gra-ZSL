@@ -72,10 +72,10 @@ function updateJoystickCenter() {
 }
 window.addEventListener("resize", updateJoystickCenter);
 
-document.addEventListener("DOMContentLoaded", () => {
+/*document.addEventListener("DOMContentLoaded", () => {
     updateJoystickCenter();
     gameLoop();
-});
+});*/
 
 function gameLoop() {
     updatePlayer();
@@ -119,6 +119,7 @@ function updatePlayer() {
 
     checkCollision(); // Jeśli masz inne kolizje
     checkCollisionQuiz();
+    checkCollisionPlotki();
 }
 
 
@@ -436,32 +437,96 @@ function checkAnswerQuiz(chosenIndex, correctIndex, subject) {
   }
 }
 
+function showRoomPopupPlotki(subjects) {
+  if (document.querySelector('.room-popup')) return;
 
-// Rozszerzona wersja dla samokształceniowej sali
+  const popup = document.createElement("div");
+  popup.classList.add("room-popup");
 
-function startQuiz() {
-  const question = window.currentQuestion;
-  questionBox.innerHTML = `
-    <p>${question.questionText}</p>
-    <div>
-      <button onclick="answerQuestion('${question.options[0]}')">${question.options[0]}</button>
-      <button onclick="answerQuestion('${question.options[1]}')">${question.options[1]}</button>
+  const imagesHTML = subjects.map(subject => `
+    <div class="image-wrapper">
+      <img src="${subject}.jpg" alt="${subject}" />
+      <p><strong>${subject}</strong></p>
+    </div>
+  `).join("");
+
+  popup.innerHTML = `
+    <div class="popup-content">
+      <div class="images-container">${imagesHTML}</div>
+      <button class="close-popup-plotki">Zamknij</button>
     </div>
   `;
+
+  document.body.appendChild(popup);
+
+  // Uwaga: nowa unikalna klasa i zmienna
+  const zamknijBtn = popup.querySelector(".close-popup-plotki");
+  if (zamknijBtn) {
+    zamknijBtn.addEventListener("click", () => {
+      popup.remove();
+    });
+  } else {
+    console.warn("Nie znaleziono przycisku zamknięcia popupu plotek.");
+  }
 }
 
-function closeQuiz() {
-  questionBox.style.display = "none";
+
+
+
+function checkCollisionPlotki() {
+    const playerRect = {
+        left: player.x,
+        top: player.y,
+        right: player.x + playerElement.offsetWidth,
+        bottom: player.y + playerElement.offsetHeight
+    };
+
+    const rooms = document.querySelectorAll('.room3');
+    let inQuizRoom = false;
+
+    for (let room of rooms) {
+        const roomRect = room.getBoundingClientRect();
+        const playerRectScreen = playerElement.getBoundingClientRect();
+
+        const collision = !(
+            playerRectScreen.right < roomRect.left ||
+            playerRectScreen.left > roomRect.right ||
+            playerRectScreen.bottom < roomRect.top ||
+            playerRectScreen.top > roomRect.bottom
+        );
+
+        if (collision) {
+            inQuizRoom = true;
+
+            if (lastQuizRoom === room.id) return;
+            lastQuizRoom = room.id;
+
+            // Pobierz data-subjects
+            const rawSubjects = room.dataset.subjects || "";
+            const subjectsArray = rawSubjects.split(',').map(s => s.trim()).filter(Boolean);
+
+            console.log("Wchodzisz do pokoju:", room.id);
+            console.log("Tematy:", subjectsArray);
+
+            if (subjectsArray.length > 0) {
+                showRoomPopupPlotki(subjectsArray);
+            } else {
+                console.warn("Brak tematów dla pokoju:", room.id);
+            }
+
+            // Zatrzymaj gracza
+            player.dx = 0;
+            player.dy = 0;
+            break;
+        }
+    }
+
+    if (!inQuizRoom) {
+        lastQuizRoom = null;
+    }
 }
 
-function answerQuestionQuiz(selectedAnswer) {
-  if (hasAnswered) return;
-  hasAnswered = true;
 
-  const correct = selectedAnswer === window.currentQuestion.correctAnswer;
-  alert(correct ? "Dobra odpowiedź!" : "Zła odpowiedź!");
-  questionBox.style.display = "none";
-}
 
 
 function startDrag(event) {

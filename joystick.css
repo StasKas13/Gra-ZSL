@@ -419,3 +419,16 @@ html, body {
       font-size: 16px;
       cursor: pointer;
     }
+
+    
+
+.popup-content img {
+  width: 100px;
+  margin: 5px;
+}
+
+.images-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
