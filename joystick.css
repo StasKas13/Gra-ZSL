@@ -423,12 +423,15 @@ html, body {
     
 
 .popup-content img {
-  width: 100px;
-  margin: 5px;
+    width: 82%;
+    margin: auto;
 }
 
 .images-container {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+}
+.image-wrapper{
+  width: 200px;
 }
