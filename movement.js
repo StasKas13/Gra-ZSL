@@ -22,6 +22,10 @@ let savedPoints = 0;
 let sum_points = 0;
 let punkty = 0;
 
+let popupStatus = 0;
+let popupStatus_pl = 0;
+let player_moved = 0;
+
 document.addEventListener("DOMContentLoaded", () => {
     updateJoystickCenter();
     gameStartTime = Date.now(); // Start pomiaru czasu
@@ -117,9 +121,15 @@ function updatePlayer() {
         player.dy = 0; // Zatrzymanie ruchu w Y
     }
 
+    if (player_moved == 0 && (player.dx != 0 || player.dy != 0 )) {
+        player_moved = 1;
+    }
+
     checkCollision(); // Jeśli masz inne kolizje
-    checkCollisionQuiz();
-    checkCollisionPlotki();
+    if (player_moved == 1) {
+        checkCollisionQuiz();
+        checkCollisionPlotki();
+    }
 }
 
 
@@ -265,6 +275,9 @@ function updateScoreDisplay() {
 
 // quiz
 function showRoomPopup(subject) {
+    if(popupStatus == 1){
+        return;
+    }
   if (document.querySelector('.room-popup')) return;
   const popup = document.createElement("div");
   popup.classList.add("room-popup");
@@ -279,6 +292,7 @@ function showRoomPopup(subject) {
   `;
 
   document.body.appendChild(popup);
+  popupStatus = 1;
 
   // Teraz znajdujemy przyciski tylko w ramach popupu
   const startButton = popup.querySelector(".start-quiz");
@@ -376,6 +390,9 @@ function checkCollisionQuiz() {
             player.dy = 0;
             break;
         }
+        else{
+            popupStatus = 0;
+        }
     }
 
     // Jeśli nie jesteśmy w żadnym pokoju – resetujemy
@@ -438,6 +455,9 @@ function checkAnswerQuiz(chosenIndex, correctIndex, subject) {
 }
 
 function showRoomPopupPlotki(subjects) {
+    if(popupStatus_pl == 1){
+        return;
+    }
   if (document.querySelector('.room-popup')) return;
 
   const popup = document.createElement("div");
@@ -456,14 +476,16 @@ function showRoomPopupPlotki(subjects) {
       <button class="close-popup-plotki">Zamknij</button>
     </div>
   `;
-
+popupStatus_pl=1;
   document.body.appendChild(popup);
+        
 
   // Uwaga: nowa unikalna klasa i zmienna
   const zamknijBtn = popup.querySelector(".close-popup-plotki");
   if (zamknijBtn) {
     zamknijBtn.addEventListener("click", () => {
       popup.remove();
+
     });
   } else {
     console.warn("Nie znaleziono przycisku zamknięcia popupu plotek.");
@@ -518,6 +540,9 @@ function checkCollisionPlotki() {
             player.dx = 0;
             player.dy = 0;
             break;
+        }
+        else{
+            popupStatus_pl = 0;
         }
     }
 
