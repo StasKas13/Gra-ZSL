@@ -45,7 +45,7 @@
 </div>
 <script>
 window.addEventListener("DOMContentLoaded", () => {
-  const savedPlayer = localStorage.getItem("selectedPlayer");
+  localStorage.removeItem("selectedPlayer");
   const startBtn = document.getElementById("startBtn");
   if (savedPlayer) {
     startBtn.disabled = false;
@@ -124,23 +124,6 @@ document.getElementById("score").addEventListener("click", function (e) {
 function closeScore() {
   document.getElementById("playerScore").classList.add("hidden");
 }
-
-  document.getElementById("startBtn").addEventListener("click", function () {
-  const savedPlayer = localStorage.getItem("selectedPlayer");
-  if (savedPlayer) {
-    window.location.href = "aaaaaaaaaaa.html";
-  } else {
-    alert("Najpierw wybierz gracza! \nZnajdziesz tą opcje w menu :)");
-  }
-});
-
-  // Przy załadowaniu strony – jeśli zapisany gracz istnieje, odblokuj przycisk
-  window.addEventListener("DOMContentLoaded", () => {
-    const savedPlayer = localStorage.getItem("selectedPlayer");
-    if (savedPlayer) {
-      document.getElementById("startBtn").disabled = false;
-    }
-  });
 </script>
 </body>
 </html>
