@@ -464,15 +464,15 @@ function showRoomPopupPlotki(subjects) {
   popup.classList.add("room-popup");
 
   const imagesHTML = subjects.map(subject => `
-    <div class="image-wrapper">
-      <img src="${subject}.jpg" alt="${subject}" />
-      <p><strong>${subject}</strong></p>
+    <div class="image-wrapper-plotki">
+      <img src="${subject}.png" alt="${subject}" />
+      
     </div>
   `).join("");
 
   popup.innerHTML = `
-    <div class="popup-content">
-      <div class="images-container">${imagesHTML}</div>
+    <div class="popup-content-plotki">
+      <div class="images-container-plotki">${imagesHTML}</div>
       <button class="close-popup-plotki">Zamknij</button>
     </div>
   `;

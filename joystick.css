@@ -407,7 +407,7 @@ html, body {
     }
 
     .room-popup img {
-      max-width: 400px;  /* lub inna wartość, np. 100%, 200px itd. */
+      max-width: 20%;  /* lub inna wartość, np. 100%, 200px itd. */
       height: auto;      /* zachowuje proporcje */
       display: block;
       margin: 0 auto;    /* centrowanie */
@@ -423,15 +423,30 @@ html, body {
     
 
 .popup-content img {
-    width: 82%;
-    margin: auto;
+    max-width: 50%;
+    
 }
-
+.popup-content-plotki img {
+    max-width: 100%;
+    
+}
+.images-container-plotki {
+  display: flex;
+  flex-wrap: column;
+  gap: 5px;
+  justify-content: center;
+}
 .images-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  flex-wrap: column;
+  gap: 5px;
+  justify-content: center;
+}
+.image-wrapper-plotki{
+  width: 300px;
+  height: 300px;
 }
 .image-wrapper{
-  width: 200px;
+  width: 300px;
+  height: 300px;
 }
